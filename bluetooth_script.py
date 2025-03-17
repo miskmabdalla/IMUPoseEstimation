@@ -1,25 +1,22 @@
 import asyncio
 from bleak import BleakScanner
 from bleak import BleakClient
+import os
+import csv
+import time
 
-
-# device_address= ""
-# device_service_UUID = ""
-device_list = []
-
+device_list = {}
+DATA_DIR = "imu_data"
+os.makedirs(DATA_DIR, exist_ok=True)
 
 def detection_callback(device, advertisement_data):
     """Detects Arduino and saves its address and service UUID."""
-    if device.name == "Arduino" and device.address not in device_list:
-        # print(f"Name: {device.name}, Address: {device.address}, UUIDs: {advertisement_data.service_uuids}")
-        # global device_address, device_service_UUID, 
-        global device_list
-        # device_address = device.address
-        # device_service_UUID = advertisement_data.service_uuids[0]
+    # print(f"Name : {device.name},  Address: {device.address}")
+    if (device.name == "Arduino" or device.name == "IMU_BLE_Device") and device.address not in device_list:
+        if advertisement_data.service_uuids:
+            device_list[device.address] = advertisement_data.service_uuids[0]
+            print(f"Found Arduino - Address: {device.address}, Service UUID: {advertisement_data.service_uuids[0]}")
 
-        device_list.append(device.address)
-        # device_tuple = (device_address, device_service_UUID)
-        # device_list.append(device_tuple)
 
 
 
@@ -30,59 +27,82 @@ async def scanning():
     await asyncio.sleep(5)  
     await scanner.stop()
 
-    # print(f"Device Address: {device_address}")
-    # print(f"Service UUID:  {device_service_UUID}")
-    # print(f"Characteristic UUID: {device_char_UUID}")
+class IMUSensor:
+    def __init__(self, device_address: str, device_service_UUID: str):
+        self.device_address = device_address
+        self.device_service_UUID = device_service_UUID
+        self.device_char_UUID = None  # To be set dynamically
+        self.file_path = os.path.join(DATA_DIR, f"{self.device_address.replace(':', '')}.csv")
+
+        with open(self.file_path, "w") as f:
+            f.write("Timestamp,AccelX,AccelY,AccelZ,GyroX,GyroY,GyroZ\n")
+
+    def __str__(self):
+        return f"IMU Sensor at {self.device_address} (Service UUID: {self.device_service_UUID})"
 
 
-def notification_handler(uuid, sender, data):
-    print(f"Received: {data.decode('utf-8')}")  # Convert bytes to string
+    
+    async def read_characteristic(self):
+        """Connects to the sensor and subscribes to notifications."""
+        async with BleakClient(self.device_address) as client:
+            if not client.is_connected:
+                print(f"Failed to connect to {self.device_address}")
+                return
 
-async def read_characteristic(device_address):
-    """Connects to the Arduino and subscribes to notifications."""
+            print(f"Connected to {self.device_address}")
+            print("Discovering services and characteristics...")
 
-    if not device_address:
-        print("Device address not found. Exiting.")
+            # Get available services
+            await client.get_services()
+            for service in client.services:
+                for char in service.characteristics:
+                    if "notify" in char.properties:
+                        self.device_char_UUID = char.uuid
+                        break  # Use first available notify characteristic
+
+            if not self.device_char_UUID:
+                print(f"No suitable characteristic found for {self.device_address}.")
+                return
+
+            print(f"Subscribing to characteristic {self.device_char_UUID}...")
+
+            
+
+            async def notification_handler(sender, data):
+                """Handles incoming sensor data."""
+                decoded_data = data.decode("utf-8")
+                print(f"[{self.device_address}] Received: {decoded_data}")
+
+                with open(self.file_path, "a", newline="") as f:
+                    # writer = csv.writer(f)
+                    # writer.writerow([decoded_data])
+                    writer = csv.writer(f)
+                    writer.writerow([time.time()] + decoded_data.split(","))
+
+            # Start receiving data
+            await client.start_notify(self.device_char_UUID, notification_handler)
+
+            await asyncio.sleep(30)  # Adjust listening duration as needed
+
+            await client.stop_notify(self.device_char_UUID)
+            print(f"Stopped notifications for {self.device_address}")
+
+
+
+
+async def main():
+    await scanning()  # Scan for devices first
+
+    if not device_list:
+        print("No Arduino devices found.")
         return
 
-    async with BleakClient(device_address) as client:
-        if not client.is_connected:
-            print("Failed to connect to device.")
-            return
+    sensors = [IMUSensor(addr, service_uuid) for addr, service_uuid in device_list.items()]
 
-        print(f"Connected to {device_address}")
-        print("Available Services & Characteristics:")
-        device_char_UUID = None
+    # Read data from all sensors concurrently
+    await asyncio.gather(*(sensor.read_characteristic() for sensor in sensors))
 
-        for service in client.services:
-            print(f"Service: {service.uuid}")
-            for char in service.characteristics:
-                print(f" - Characteristic: {char.uuid} (Properties: {char.properties})")
-                
-                # Select characteristic with 'notify' property
-                if "notify" in char.properties:
-                    device_char_UUID = char.uuid
-
-        if not device_char_UUID:
-            print("No suitable characteristic found. Exiting.")
-            return
-        
-        print(f"Subscribing to characteristic {device_char_UUID}...")
-
-        # Start receiving data
-        await client.start_notify(device_char_UUID, notification_handler)
-
-        # Keep connection alive to receive notifications
-        await asyncio.sleep(30)  # Change this to how long you want to listen
-
-        # Stop receiving data
-        await client.stop_notify(device_char_UUID)
+# Run the script
+asyncio.run(main())
 
 
-asyncio.run(scanning())
-# Run the BLE client
-for device in device_list:
-    asyncio.run(read_characteristic(device))
-
-
-# Name: Arduino, Address: 1B46F1B4-A2D2-6E21-BF55-2981B4B35216, UUIDs: ['19b10000-e8f2-537e-4f6c-d104768a1214']
