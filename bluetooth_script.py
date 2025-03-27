@@ -4,9 +4,14 @@ from bleak import BleakClient
 import os
 import csv
 import time
+import matplotlib.pyplot as plt
+import pandas as pd
+from pynput.keyboard import Listener
 
 device_list = {}
+timestamp = ""
 DATA_DIR = "imu_data"
+pressed_flag = False
 os.makedirs(DATA_DIR, exist_ok=True)
 
 def detection_callback(device, advertisement_data):
@@ -27,12 +32,29 @@ async def scanning():
     await asyncio.sleep(5)  
     await scanner.stop()
 
+    def on_press(key):
+        global pressed_flag
+        try:
+            if key.char == 'r':  # Check if the 'r' key is pressed
+                pressed_flag = True
+                print("Button pressed")
+        except AttributeError:
+            # Handle special keys (e.g., Shift, Ctrl) if needed
+            pass
+        
+    listener = Listener(on_press=on_press)
+    listener.start()
+
 class IMUSensor:
     def __init__(self, device_address: str, device_service_UUID: str):
         self.device_address = device_address
         self.device_service_UUID = device_service_UUID
         self.device_char_UUID = None  # To be set dynamically
-        self.file_path = os.path.join(DATA_DIR, f"{self.device_address.replace(':', '')}.csv")
+        # Create a unique folder for each sensor
+        self.sensor_folder = os.path.join(DATA_DIR, self.device_address.replace(":", "_"))
+        os.makedirs(self.sensor_folder, exist_ok=True)
+
+        self.file_path = os.path.join(self.sensor_folder, f"{timestamp}.csv")
 
         with open(self.file_path, "w") as f:
             f.write("Timestamp,AccelX,AccelY,AccelZ,GyroX,GyroY,GyroZ\n")
@@ -41,7 +63,8 @@ class IMUSensor:
         return f"IMU Sensor at {self.device_address} (Service UUID: {self.device_service_UUID})"
 
 
-    
+  
+
     async def read_characteristic(self):
         """Connects to the sensor and subscribes to notifications."""
         async with BleakClient(self.device_address) as client:
@@ -72,12 +95,14 @@ class IMUSensor:
                 """Handles incoming sensor data."""
                 decoded_data = data.decode("utf-8")
                 print(f"[{self.device_address}] Received: {decoded_data}")
-
                 with open(self.file_path, "a", newline="") as f:
                     # writer = csv.writer(f)
                     # writer.writerow([decoded_data])
-                    writer = csv.writer(f)
-                    writer.writerow([time.time()] + decoded_data.split(","))
+                    if (pressed_flag == True):
+                        writer = csv.writer(f)
+                        writer.writerow([time.time()] + decoded_data.split(","))
+
+                        
 
             # Start receiving data
             await client.start_notify(self.device_char_UUID, notification_handler)
@@ -91,6 +116,8 @@ class IMUSensor:
 
 
 async def main():
+    global timestamp
+    timestamp = time.strftime("%Y%m%d_%H%M%S")  # YYYYMMDD_HHMMSS format
     await scanning()  # Scan for devices first
 
     if not device_list:

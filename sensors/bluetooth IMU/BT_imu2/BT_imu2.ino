@@ -93,7 +93,7 @@ void loop() {
       imuDataCharacteristic.writeValue(imuData);
       Serial.println(imuData);
       
-      delay(100);
+      delay(20);
     }
 
     Serial.print("Disconnected from central: ");
