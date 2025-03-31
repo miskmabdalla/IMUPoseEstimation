@@ -32,7 +32,7 @@ def convert_mot_to_csv(mot_path: str, csv_path: str = None):
                 row = line.strip().split('\t')
                 writer.writerow(row)
 
-    print(f"✅ Converted: {mot_path} → {csv_path}")
+    print(f"Converted: {mot_path} --> {csv_path}")
     return csv_path
 
 

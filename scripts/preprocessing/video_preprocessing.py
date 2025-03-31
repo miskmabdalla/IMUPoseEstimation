@@ -11,7 +11,7 @@ def convert_mov_to_mp4_in_place(input_dir):
     for mov_file in input_dir.glob("*.mov"):
         mp4_file = mov_file.with_suffix(".mp4")
         command = f'ffmpeg -y -i "{mov_file}" -c:v libx264 -c:a aac "{mp4_file}"'
-        print(f"🎥 Converting MOV to MP4: {mov_file.name} → {mp4_file.name}")
+        print(f"Converting MOV to MP4: {mov_file.name} --> {mp4_file.name}")
         subprocess.run(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         mov_file.unlink()  # delete original .mov file
 
@@ -23,7 +23,7 @@ def reduce_fps(input_path, output_path, target_fps=50):
     input_path = str(input_path)
     output_path = str(output_path)
     command = f'ffmpeg -y -i "{input_path}" -filter:v fps={target_fps} "{output_path}"'
-    print(f"▶️ Reducing FPS: {input_path} → {output_path}")
+    print(f"Reducing FPS: {input_path} --> {output_path}")
     subprocess.run(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
