@@ -8,10 +8,10 @@
 #define BLUE_LED LED_BLUE
 
 // Create a BLE service
-BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLEService imuService("29B10000-E8F2-537E-4F6C-D104768A1214");
 
 // Create a BLE characteristic for IMU data
-BLEStringCharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 200);
+BLEStringCharacteristic imuDataCharacteristic("29B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 200);
 
 // Create an instance of LSM6DS3 IMU sensor
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
@@ -122,6 +122,8 @@ void loop() {
 
     Serial.print("Disconnected from central: ");
     Serial.println(central.address());
+
+
   }
 
   // --- SOLID RED WHEN NOT CONNECTED ---
