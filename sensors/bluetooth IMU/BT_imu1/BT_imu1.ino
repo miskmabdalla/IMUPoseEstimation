@@ -11,10 +11,17 @@
 BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
 
 // Create a BLE characteristic for IMU data
-BLEStringCharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 64);
+BLEStringCharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 200);
 
 // Create an instance of LSM6DS3 IMU sensor
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
+
+// Batching config
+const int batchSize = 3;
+String imuBuffer[batchSize];
+int bufferIndex = 0;
+const unsigned long sampleInterval = 20;  // 50 Hz
+unsigned long lastSampleTime = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -79,21 +86,38 @@ void loop() {
         digitalWrite(BLUE_LED, ledState ? LOW : HIGH);
       }
 
-      float aX = myIMU.readFloatAccelX();
-      float aY = myIMU.readFloatAccelY();
-      float aZ = myIMU.readFloatAccelZ();
-      float gX = myIMU.readFloatGyroX();
-      float gY = myIMU.readFloatGyroY();
-      float gZ = myIMU.readFloatGyroZ();
-      
-      // Format data as CSV
-      String imuData = String(aX, 3) + "," + String(aY, 3) + "," + String(aZ, 3) + "," +
-                       String(gX, 3) + "," + String(gY, 3) + "," + String(gZ, 3);
-      
-      imuDataCharacteristic.writeValue(imuData);
-      Serial.println(imuData);
-      
-      delay(20);
+      // Sampling logic
+      if (millis() - lastSampleTime >= sampleInterval) {
+        lastSampleTime += sampleInterval;
+
+        float aX = myIMU.readFloatAccelX();
+        float aY = myIMU.readFloatAccelY();
+        float aZ = myIMU.readFloatAccelZ();
+        float gX = myIMU.readFloatGyroX();
+        float gY = myIMU.readFloatGyroY();
+        float gZ = myIMU.readFloatGyroZ();
+
+        // Store sample in batch buffer
+        imuBuffer[bufferIndex] = String(aX, 3) + "," + String(aY, 3) + "," + String(aZ, 3) + "," +
+                                 String(gX, 3) + "," + String(gY, 3) + "," + String(gZ, 3);
+        bufferIndex++;
+
+        // If buffer full, send BLE notification with all samples
+        if (bufferIndex == batchSize) {
+          String payload = imuBuffer[0];
+          for (int i = 1; i < batchSize; i++) {
+            payload += "\n" + imuBuffer[i];
+          }
+
+          imuDataCharacteristic.writeValue(payload);
+
+          Serial.println(payload);
+          Serial.print("Payload length: ");
+          Serial.println(payload.length());
+
+          bufferIndex = 0;  // Reset buffer
+        }
+      }
     }
 
     Serial.print("Disconnected from central: ");
