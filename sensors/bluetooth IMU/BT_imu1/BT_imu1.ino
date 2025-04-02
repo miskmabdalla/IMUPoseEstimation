@@ -20,7 +20,7 @@ LSM6DS3 myIMU(I2C_MODE, 0x6A);
 const int batchSize = 3;
 String imuBuffer[batchSize];
 int bufferIndex = 0;
-const unsigned long sampleInterval = 20;  // 50 Hz
+const unsigned long sampleInterval = 100;  // 50 Hz
 unsigned long lastSampleTime = 0;
 
 void setup() {
