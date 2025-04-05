@@ -12,7 +12,7 @@
 
 
 [project]
-video_input = '<video_path.ext>'   # 'webcam' or '<video_path.ext>', or ['video1_path.mp4', 'video2_path.avi>', ...]
+video_input = 'trial_4.mp4'   # 'webcam' or '<video_path.ext>', or ['video1_path.mp4', 'video2_path.avi>', ...]
                            # On Windows, replace '\' with '/'
                            # Beware that images won't be saved if paths contain non ASCII characters.
 px_to_m_from_person_id = 2    # Person to use for pixels to meters conversion (not used if a calibration file is provided)
@@ -26,7 +26,7 @@ compare = false   # Not implemented yet
 # Video parameters
 time_range = []   # [] for the whole video, or [start_time, end_time] (in seconds), or [[start_time1, end_time1], [start_time2, end_time2], ...]
                   # Time ranges can be different for each video. 
-video_dir = ''    # If empty, video dir is current dir
+video_dir = 'videos_data/50_fps'    # If empty, video dir is current dir
 
 # Webcam parameters
 webcam_id = 0 # your webcam id (0 is default)
@@ -36,13 +36,13 @@ input_size = [1280, 720] # [W, H]. Lower resolution will be faster but less prec
 [process]
 multiperson = false   # Saving the motions of all the persons detected and tracked in the video. 
                      # If false, the person saved will be the one with the highest sum of keypoint scores over the video
-show_realtime_results = false
+show_realtime_results = true
 save_vid = true
 save_img = false
 save_pose = true
 calculate_angles = true
 save_angles = true
-result_dir = '' # If empty, project dir is current dir
+result_dir = 'Sports2D_results' # If empty, project dir is current dir
 
 
 ##########################
@@ -151,9 +151,9 @@ filter_type = 'butterworth'   # butterworth, gaussian, LOESS, median
 
 
 [kinematics]
-do_ik = true # Do scaling and inverse kinematics?
-use_augmentation = true  # true or false (lowercase) # Set to true if you want to use the model with augmented markers
-use_contacts_muscles = true # true or false (lowercase) # If true, contact spheres and muscles are added to the model
+do_ik = false # Do scaling and inverse kinematics?
+use_augmentation = false  # true or false (lowercase) # Set to true if you want to use the model with augmented markers
+use_contacts_muscles = false # true or false (lowercase) # If true, contact spheres and muscles are added to the model
 participant_mass = [67.0, 55.0] # kg # defaults to 70 if not provided. No influence on kinematics (motion), only on kinetics (forces)
 right_left_symmetry = true # true or false (lowercase) # Set to false only if you have good reasons to think the participant is not symmetrical (e.g. prosthetic limb)
 
