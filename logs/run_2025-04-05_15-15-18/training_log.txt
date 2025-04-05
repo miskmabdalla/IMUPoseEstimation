@@ -1,0 +1,4 @@
+
+Starting training for 20 epochs...
+
+Epoch 1/20
