@@ -11,6 +11,7 @@ class SensorHandler: NSObject, CBPeripheralDelegate {
     var logFile: FileHandle?
     var logPath: String = ""
     var charUUID: CBUUID?
+    var controlCharUUID: CBUUID?
 
     init(peripheral: CBPeripheral, trialPath: String) {
         self.peripheral = peripheral
@@ -45,8 +46,19 @@ class SensorHandler: NSObject, CBPeripheralDelegate {
                 charUUID = char.uuid
                 peripheral.setNotifyValue(true, for: char)
                 print("📡 Subscribed to \(char.uuid) on \(peripheral.identifier)")
+            } else if char.properties.contains(.write) {
+                controlCharUUID = char.uuid
+                print("📝 Found control characteristic: \(char.uuid)")
             }
         }
+    }
+
+    func sendRecordingSignal() {
+        guard let controlUUID = controlCharUUID else { return }
+        guard let controlChar = (peripheral.services?.flatMap { $0.characteristics ?? [] }.first { $0.uuid == controlUUID }) else { return }
+        let value: [UInt8] = [1]
+        peripheral.writeValue(Data(value), for: controlChar, type: .withResponse)
+        print("📤 Sent start recording signal to \(peripheral.identifier)")
     }
 
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -119,6 +131,9 @@ class BLELogger: NSObject, CBCentralManagerDelegate {
                 if let input = readLine(strippingNewline: true), input.lowercased() == "r" {
                     loggingEnabled = true
                     print("🟢 Logging started")
+                    for handler in self.handlers.values {
+                        handler.sendRecordingSignal()
+                    }
                     break
                 }
             }

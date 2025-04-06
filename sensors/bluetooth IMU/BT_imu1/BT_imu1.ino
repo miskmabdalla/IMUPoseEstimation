@@ -8,6 +8,8 @@
 
 BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
 BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 168);
+BLEByteCharacteristic controlChar("19B10002-E8F2-537E-4F6C-D104768A1214", BLEWrite);
+bool recording = false;
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
@@ -19,6 +21,7 @@ unsigned long lastSampleTime = 0;
 
 void setup() {
   Serial.begin(115200);
+  imuService.addCharacteristic(controlChar);
   while (!Serial && millis() < 3000);
 
   pinMode(RED_LED, OUTPUT);
@@ -72,6 +75,12 @@ void loop() {
         ledState = !ledState;
         digitalWrite(BLUE_LED, ledState ? LOW : HIGH);
       }
+    if (controlChar.written() && recording == false) {
+      if (controlChar.value() == 1) {
+        recording = true;
+        digitalWrite(GREEN_LED, LOW);  // ON
+      }
+    }
 
       unsigned long now = millis();
       if (now - lastSampleTime >= sampleInterval) {
@@ -103,7 +112,7 @@ void loop() {
 
         if (bufferIndex == samplesPerBatch) {
           bool sent = imuDataCharacteristic.writeValue(batchedData, sizeof(batchedData));
-          Serial.println(sent ? "✅ Batch sent" : "❌ BLE write failed");
+          Serial.println(sent ? "Batch sent" : "BLE write failed");
           delay(1);  // Small throttle to avoid BLE flooding
 
 
@@ -124,11 +133,12 @@ void loop() {
         }
       }
     }
-
+    recording = false;
     Serial.print("Disconnected from central: ");
     Serial.println(central.address());
   }
 
   digitalWrite(RED_LED, LOW);
   digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(GREEN_LED, HIGH);
 }
