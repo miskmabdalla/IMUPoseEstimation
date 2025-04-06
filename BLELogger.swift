@@ -1,9 +1,6 @@
-// BLELogger.swift (Updated: Robust Logging & Float Decode Verification)
-
 import Foundation
 import CoreBluetooth
 import Dispatch
-import Darwin.C
 
 let baseTrialDir = FileManager.default.currentDirectoryPath + "/dataset/imu_data"
 var loggingEnabled = false
@@ -17,7 +14,7 @@ class SensorHandler: NSObject, CBPeripheralDelegate {
 
     init(peripheral: CBPeripheral, trialPath: String) {
         self.peripheral = peripheral
-        self.queue = DispatchQueue(label: "queue_\(peripheral.identifier.uuidString)")
+        self.queue = DispatchQueue(label: "decode_queue_\(peripheral.identifier.uuidString)")
         super.init()
         peripheral.delegate = self
         createCSV(trialPath: trialPath)
@@ -29,7 +26,7 @@ class SensorHandler: NSObject, CBPeripheralDelegate {
         FileManager.default.createFile(atPath: logPath, contents: nil)
         if let handle = try? FileHandle(forWritingTo: URL(fileURLWithPath: logPath)) {
             logFile = handle
-            handle.write("Timestamp,AccelX,AccelY,AccelZ,GyroX,GyroY,GyroZ\n".data(using: .utf8)!)
+            handle.write("Millis,AccelX,AccelY,AccelZ,GyroX,GyroY,GyroZ\n".data(using: .utf8)!)
             print("📁 Logging to: \(logPath)")
         } else {
             print("❌ Failed to open log file for \(peripheral.identifier)")
@@ -54,48 +51,43 @@ class SensorHandler: NSObject, CBPeripheralDelegate {
 
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard loggingEnabled else { return }
-        guard let data = characteristic.value else {
-            print("⚠️ No data in characteristic update from \(peripheral.identifier)")
-            return
-        }
-
-        let sampleSize = 6 * 4
-        guard data.count % sampleSize == 0 else {
-            print("❌ Unexpected packet size from \(peripheral.identifier): \(data.count) bytes")
-            return
-        }
-
-        let sampleCount = data.count / sampleSize
-        let floatsPerSample = 6
-
-        guard let handle = logFile else {
-            print("❌ Missing log file handle for \(peripheral.identifier)")
-            return
-        }
+        guard let data = characteristic.value else { return }
 
         queue.async {
-            let now = Date().timeIntervalSince1970
+            guard data.count % 28 == 0 else {
+                print("⚠️ Packet size mismatch (\(data.count) bytes) from \(peripheral.identifier)")
+                return
+            }
+            guard let handle = self.logFile else { return }
+
+            let floatsPerSample = 6
+            let sampleSize = 4 + (floatsPerSample * 4)
+            let sampleCount = data.count / sampleSize
+
             for i in 0..<sampleCount {
-                let offset = i * floatsPerSample * 4
+                let offset = i * sampleSize
+
+                // Decode timestamp (uint32_t millis)
+                let timestamp: UInt32 = data.withUnsafeBytes {
+                    $0.load(fromByteOffset: offset, as: UInt32.self)
+                }
+
+                // Decode float data
+                let floatOffset = offset + 4
                 let floats: [Float] = data.withUnsafeBytes {
-                    let base = $0.baseAddress!.advanced(by: offset)
+                    let base = $0.baseAddress!.advanced(by: floatOffset)
                     return Array(UnsafeBufferPointer(start: base.assumingMemoryBound(to: Float.self), count: floatsPerSample))
                 }
 
-                // Print full decoded data for debug
-                // print("🧾 Sample \(i) from \(self.peripheral.identifier): \(floats)")
-
-                let t = now - 0.02 * Double(sampleCount - 1 - i)
-                let row = [String(format: "%.6f", t)] + floats.map { String(format: "%.3f", $0) }
+                let row = [String(timestamp)] + floats.map { String(format: "%.3f", $0) }
                 if let line = row.joined(separator: ",").appending("\n").data(using: .utf8) {
                     handle.write(line)
-                } else {
-                    print("⚠️ Failed to encode row for \(peripheral.identifier)")
                 }
             }
         }
     }
 }
+
 
 class BLELogger: NSObject, CBCentralManagerDelegate {
     var centralManager: CBCentralManager!

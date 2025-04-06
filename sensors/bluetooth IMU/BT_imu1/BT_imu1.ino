@@ -1,5 +1,3 @@
-// BLELogger.ino (Arduino) - IMU Batching with Flattened Float Buffer
-
 #include <ArduinoBLE.h>
 #include <LSM6DS3.h>
 #include <Wire.h>
@@ -9,18 +7,18 @@
 #define BLUE_LED LED_BLUE
 
 BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
-BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 144);
+BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 168);
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
 const int samplesPerBatch = 6;
-float batchedData[samplesPerBatch * 6];
+uint8_t batchedData[168];  // 6 samples * 28 bytes (4 timestamp + 6*4 bytes float)
 int bufferIndex = 0;
 const unsigned long sampleInterval = 20;
 unsigned long lastSampleTime = 0;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial && millis() < 3000);
 
   pinMode(RED_LED, OUTPUT);
@@ -36,12 +34,13 @@ void setup() {
   if (myIMU.begin() != 0) {
     Serial.println("IMU Device error");
   } else {
-    Serial.println("Using float batch mode");
+    Serial.println("Using timestamped float batch mode");
   }
 
   delay(300);
 
   if (!BLE.begin()) {
+    Serial.println("BLE start failed");
     while (1);
   }
 
@@ -50,6 +49,7 @@ void setup() {
   imuService.addCharacteristic(imuDataCharacteristic);
   BLE.addService(imuService);
   BLE.advertise();
+  Serial.println("BLE IMU device advertising");
 }
 
 void loop() {
@@ -59,6 +59,9 @@ void loop() {
   BLEDevice central = BLE.central();
 
   if (central) {
+    Serial.print("Connected to central: ");
+    Serial.println(central.address());
+
     digitalWrite(RED_LED, HIGH);
 
     while (central.connected()) {
@@ -70,8 +73,9 @@ void loop() {
         digitalWrite(BLUE_LED, ledState ? LOW : HIGH);
       }
 
-      if (millis() - lastSampleTime >= sampleInterval) {
-        lastSampleTime += sampleInterval;
+      unsigned long now = millis();
+      if (now - lastSampleTime >= sampleInterval) {
+        lastSampleTime = now;
 
         float aX = myIMU.readFloatAccelX();
         float aY = myIMU.readFloatAccelY();
@@ -80,38 +84,49 @@ void loop() {
         float gY = myIMU.readFloatGyroY();
         float gZ = myIMU.readFloatGyroZ();
 
-        int base = bufferIndex * 6;
-        batchedData[base + 0] = aX;
-        batchedData[base + 1] = aY;
-        batchedData[base + 2] = aZ;
-        batchedData[base + 3] = gX;
-        batchedData[base + 4] = gY;
-        batchedData[base + 5] = gZ;
+        bool valid = isfinite(aX) && isfinite(aY) && isfinite(aZ) &&
+                     isfinite(gX) && isfinite(gY) && isfinite(gZ);
+        if (!valid) {
+          Serial.println("⚠️ Invalid IMU reading, skipping");
+          continue;
+        }
+
+        int offset = bufferIndex * 28;
+
+        uint32_t ts = millis();
+        memcpy(&batchedData[offset], &ts, 4);  // store timestamp (4 bytes)
+
+        float values[6] = {aX, aY, aZ, gX, gY, gZ};
+        memcpy(&batchedData[offset + 4], values, sizeof(values));  // store 6 floats
 
         bufferIndex++;
 
         if (bufferIndex == samplesPerBatch) {
-          bool sent = imuDataCharacteristic.writeValue((uint8_t*)batchedData, sizeof(float) * samplesPerBatch * 6);
+          bool sent = imuDataCharacteristic.writeValue(batchedData, sizeof(batchedData));
           Serial.println(sent ? "✅ Batch sent" : "❌ BLE write failed");
+          delay(1);  // Small throttle to avoid BLE flooding
+
 
           for (int i = 0; i < samplesPerBatch; i++) {
-            int offset = i * 6;
-            Serial.print(i); Serial.print(": ");
+            int off = i * 28;
+            uint32_t t;
+            memcpy(&t, &batchedData[off], 4);
+            Serial.print("t="); Serial.print(t); Serial.print("ms | ");
             for (int j = 0; j < 6; j++) {
-              Serial.print(batchedData[offset + j], 3);
+              float val;
+              memcpy(&val, &batchedData[off + 4 + j * 4], 4);
+              Serial.print(val, 3);
               Serial.print(j < 5 ? ", " : "\n");
             }
           }
 
           bufferIndex = 0;
-          for (int i = 0; i < samplesPerBatch; i++) {
-            for (int j = 0; j < 6; j++) {
-              batchedData[i * 6 + j] = 0.0;
-            }
-          }
         }
       }
     }
+
+    Serial.print("Disconnected from central: ");
+    Serial.println(central.address());
   }
 
   digitalWrite(RED_LED, LOW);
