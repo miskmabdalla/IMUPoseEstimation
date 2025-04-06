@@ -1,26 +1,22 @@
+// BLELogger.ino (Arduino) - IMU Batching with Flattened Float Buffer
+
 #include <ArduinoBLE.h>
 #include <LSM6DS3.h>
 #include <Wire.h>
 
-// Define onboard RGB LED pins
 #define RED_LED LED_RED
 #define GREEN_LED LED_GREEN
 #define BLUE_LED LED_BLUE
 
-// Create a BLE service
 BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 144);
 
-// Use binary BLE characteristic instead of string
-BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 150); // 3 samples x 6 floats x 4 bytes
-
-// Create an instance of LSM6DS3 IMU sensor
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
-// Batching config
-const int samplesPerBatch = 6;       // 3 samples per BLE packet
-float batchedData[samplesPerBatch][6];
+const int samplesPerBatch = 6;
+float batchedData[samplesPerBatch * 6];
 int bufferIndex = 0;
-const unsigned long sampleInterval = 20;  // 50 Hz
+const unsigned long sampleInterval = 20;
 unsigned long lastSampleTime = 0;
 
 void setup() {
@@ -46,7 +42,6 @@ void setup() {
   delay(300);
 
   if (!BLE.begin()) {
-    // Serial.println("Starting Bluetooth Low Energy module failed!");
     while (1);
   }
 
@@ -55,8 +50,6 @@ void setup() {
   imuService.addCharacteristic(imuDataCharacteristic);
   BLE.addService(imuService);
   BLE.advertise();
-
-  // Serial.println("BLE IMU device is now advertising");
 }
 
 void loop() {
@@ -66,9 +59,6 @@ void loop() {
   BLEDevice central = BLE.central();
 
   if (central) {
-    // Serial.print("Connected to central: ");
-    // Serial.println(central.address());
-
     digitalWrite(RED_LED, HIGH);
 
     while (central.connected()) {
@@ -90,38 +80,38 @@ void loop() {
         float gY = myIMU.readFloatGyroY();
         float gZ = myIMU.readFloatGyroZ();
 
-        // Store in batch buffer
-        batchedData[bufferIndex][0] = aX;
-        batchedData[bufferIndex][1] = aY;
-        batchedData[bufferIndex][2] = aZ;
-        batchedData[bufferIndex][3] = gX;
-        batchedData[bufferIndex][4] = gY;
-        batchedData[bufferIndex][5] = gZ;
+        int base = bufferIndex * 6;
+        batchedData[base + 0] = aX;
+        batchedData[base + 1] = aY;
+        batchedData[base + 2] = aZ;
+        batchedData[base + 3] = gX;
+        batchedData[base + 4] = gY;
+        batchedData[base + 5] = gZ;
+
         bufferIndex++;
 
         if (bufferIndex == samplesPerBatch) {
-          imuDataCharacteristic.writeValue((uint8_t*)batchedData, sizeof(batchedData));
-          // if (imuDataCharacteristic.writeValue((uint8_t*)batchedData, sizeof(batchedData))) {
-          //   Serial.println("Write OK");
-          // } 
-          // else {
-          //   Serial.println("Write failed");
-          // }
-          // Serial.println("Batch sent:");
-          // for (int i = 0; i < samplesPerBatch; i++) {
-          //   Serial.print(i); Serial.print(": ");
-          //   for (int j = 0; j < 6; j++) {
-          //     Serial.print(batchedData[i][j], 3);
-          //     Serial.print(j < 5 ? ", " : "\n");
-          //   }
-          // }
+          bool sent = imuDataCharacteristic.writeValue((uint8_t*)batchedData, sizeof(float) * samplesPerBatch * 6);
+          Serial.println(sent ? "✅ Batch sent" : "❌ BLE write failed");
+
+          for (int i = 0; i < samplesPerBatch; i++) {
+            int offset = i * 6;
+            Serial.print(i); Serial.print(": ");
+            for (int j = 0; j < 6; j++) {
+              Serial.print(batchedData[offset + j], 3);
+              Serial.print(j < 5 ? ", " : "\n");
+            }
+          }
+
           bufferIndex = 0;
+          for (int i = 0; i < samplesPerBatch; i++) {
+            for (int j = 0; j < 6; j++) {
+              batchedData[i * 6 + j] = 0.0;
+            }
+          }
         }
       }
     }
-
-    // Serial.print("Disconnected from central: ");
-    // Serial.println(central.address());
   }
 
   digitalWrite(RED_LED, LOW);
