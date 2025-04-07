@@ -1,0 +1,163 @@
+
+Starting training for 20 epochs...
+
+Epoch 1/20
+  Batch  100/372 - Running MSE Loss: 192210.1844
+  Batch  200/372 - Running MSE Loss: 189211.2691
+  Batch  300/372 - Running MSE Loss: 173067.0091
+  Batch  372/372 - Running MSE Loss: 134359.4192
+  ↳ Train → MSE: 183965.9003, MAE: 198.6339, RMSE: 428.9125, R²: -inf
+  ↳ Val   → MSE: 120209.4944, MAE: 190.8727, RMSE: 346.7124, R²: -inf
+----------------------------------------------------------------------
+Epoch 2/20
+  Batch  100/372 - Running MSE Loss: 168255.4534
+  Batch  200/372 - Running MSE Loss: 178025.0934
+  Batch  300/372 - Running MSE Loss: 169114.1049
+  Batch  372/372 - Running MSE Loss: 121023.1492
+  ↳ Train → MSE: 169923.2271, MAE: 186.3571, RMSE: 412.2175, R²: -inf
+  ↳ Val   → MSE: 123504.3189, MAE: 197.3167, RMSE: 351.4318, R²: -inf
+----------------------------------------------------------------------
+Epoch 3/20
+  Batch  100/372 - Running MSE Loss: 159567.9694
+  Batch  200/372 - Running MSE Loss: 160859.1345
+  Batch  300/372 - Running MSE Loss: 159194.9261
+  Batch  372/372 - Running MSE Loss: 110417.9373
+  ↳ Train → MSE: 159003.6695, MAE: 181.5385, RMSE: 398.7526, R²: -inf
+  ↳ Val   → MSE: 128019.4851, MAE: 209.7337, RMSE: 357.7981, R²: -inf
+----------------------------------------------------------------------
+Epoch 4/20
+  Batch  100/372 - Running MSE Loss: 157723.6501
+  Batch  200/372 - Running MSE Loss: 144953.9216
+  Batch  300/372 - Running MSE Loss: 148953.1408
+  Batch  372/372 - Running MSE Loss: 105418.8223
+  ↳ Train → MSE: 150101.9582, MAE: 180.4553, RMSE: 387.4299, R²: -inf
+  ↳ Val   → MSE: 133751.6488, MAE: 222.4844, RMSE: 365.7207, R²: -inf
+----------------------------------------------------------------------
+Epoch 5/20
+  Batch  100/372 - Running MSE Loss: 147499.5842
+  Batch  200/372 - Running MSE Loss: 143557.2694
+  Batch  300/372 - Running MSE Loss: 140018.2420
+  Batch  372/372 - Running MSE Loss: 99243.8804
+  ↳ Train → MSE: 142738.9910, MAE: 180.3870, RMSE: 377.8081, R²: -inf
+  ↳ Val   → MSE: 140174.4016, MAE: 234.5397, RMSE: 374.3987, R²: -inf
+----------------------------------------------------------------------
+Epoch 6/20
+  Batch  100/372 - Running MSE Loss: 143306.1986
+  Batch  200/372 - Running MSE Loss: 135947.8334
+  Batch  300/372 - Running MSE Loss: 133104.2973
+  Batch  372/372 - Running MSE Loss: 94645.5440
+  ↳ Train → MSE: 136639.1272, MAE: 179.9300, RMSE: 369.6473, R²: -inf
+  ↳ Val   → MSE: 141936.4218, MAE: 236.2151, RMSE: 376.7445, R²: -inf
+----------------------------------------------------------------------
+Epoch 7/20
+  Batch  100/372 - Running MSE Loss: 130094.7021
+  Batch  200/372 - Running MSE Loss: 127552.0867
+  Batch  300/372 - Running MSE Loss: 124041.4316
+  Batch  372/372 - Running MSE Loss: 85714.0158
+  ↳ Train → MSE: 125954.5773, MAE: 164.0592, RMSE: 354.9008, R²: -inf
+  ↳ Val   → MSE: 149762.1296, MAE: 245.6726, RMSE: 386.9911, R²: -inf
+----------------------------------------------------------------------
+Epoch 8/20
+  Batch  100/372 - Running MSE Loss: 118241.5072
+  Batch  200/372 - Running MSE Loss: 112816.1763
+  Batch  300/372 - Running MSE Loss: 111825.6982
+  Batch  372/372 - Running MSE Loss: 88542.7732
+  ↳ Train → MSE: 115103.4455, MAE: 152.5406, RMSE: 339.2690, R²: -inf
+  ↳ Val   → MSE: 159984.8050, MAE: 258.8458, RMSE: 399.9810, R²: -inf
+----------------------------------------------------------------------
+Epoch 9/20
+  Batch  100/372 - Running MSE Loss: 108295.6366
+  Batch  200/372 - Running MSE Loss: 109228.1504
+  Batch  300/372 - Running MSE Loss: 104411.3515
+  Batch  372/372 - Running MSE Loss: 75416.3263
+  ↳ Train → MSE: 107082.1528, MAE: 146.8227, RMSE: 327.2341, R²: -inf
+  ↳ Val   → MSE: 167761.7747, MAE: 267.2231, RMSE: 409.5873, R²: -inf
+----------------------------------------------------------------------
+Epoch 10/20
+  Batch  100/372 - Running MSE Loss: 100174.7089
+  Batch  200/372 - Running MSE Loss: 101660.0189
+  Batch  300/372 - Running MSE Loss: 96582.0630
+  Batch  372/372 - Running MSE Loss: 71896.3101
+  ↳ Train → MSE: 99773.5191, MAE: 140.0550, RMSE: 315.8695, R²: -inf
+  ↳ Val   → MSE: 174828.2521, MAE: 272.8649, RMSE: 418.1247, R²: -inf
+----------------------------------------------------------------------
+Epoch 11/20
+  Batch  100/372 - Running MSE Loss: 98148.0665
+  Batch  200/372 - Running MSE Loss: 90770.4836
+  Batch  300/372 - Running MSE Loss: 91698.9044
+  Batch  372/372 - Running MSE Loss: 67517.0341
+  ↳ Train → MSE: 93705.8566, MAE: 133.9500, RMSE: 306.1141, R²: -inf
+  ↳ Val   → MSE: 182661.3459, MAE: 279.4182, RMSE: 427.3890, R²: -inf
+----------------------------------------------------------------------
+Epoch 12/20
+  Batch  100/372 - Running MSE Loss: 89711.8206
+  Batch  200/372 - Running MSE Loss: 88293.6488
+  Batch  300/372 - Running MSE Loss: 87495.0141
+  Batch  372/372 - Running MSE Loss: 62541.0547
+  ↳ Train → MSE: 88400.5579, MAE: 128.2302, RMSE: 297.3223, R²: -inf
+  ↳ Val   → MSE: 196347.4201, MAE: 294.3298, RMSE: 443.1111, R²: -inf
+----------------------------------------------------------------------
+Epoch 13/20
+  Batch  100/372 - Running MSE Loss: 86971.9987
+  Batch  200/372 - Running MSE Loss: 81766.4332
+  Batch  300/372 - Running MSE Loss: 86074.3026
+  Batch  372/372 - Running MSE Loss: 55371.1221
+  ↳ Train → MSE: 83477.6708, MAE: 121.9700, RMSE: 288.9250, R²: -inf
+  ↳ Val   → MSE: 205151.2385, MAE: 300.4774, RMSE: 452.9362, R²: -inf
+----------------------------------------------------------------------
+Epoch 14/20
+  Batch  100/372 - Running MSE Loss: 80986.3847
+  Batch  200/372 - Running MSE Loss: 80028.3672
+  Batch  300/372 - Running MSE Loss: 79453.0648
+  Batch  372/372 - Running MSE Loss: 55279.4615
+  ↳ Train → MSE: 79406.0947, MAE: 117.2506, RMSE: 281.7909, R²: -inf
+  ↳ Val   → MSE: 209392.8899, MAE: 299.9749, RMSE: 457.5947, R²: -inf
+----------------------------------------------------------------------
+Epoch 15/20
+  Batch  100/372 - Running MSE Loss: 76767.8525
+  Batch  200/372 - Running MSE Loss: 76085.3615
+  Batch  300/372 - Running MSE Loss: 75810.4771
+  Batch  372/372 - Running MSE Loss: 53025.9107
+  ↳ Train → MSE: 75809.3195, MAE: 113.7980, RMSE: 275.3349, R²: -inf
+  ↳ Val   → MSE: 222313.2557, MAE: 315.4689, RMSE: 471.5011, R²: -inf
+----------------------------------------------------------------------
+Epoch 16/20
+  Batch  100/372 - Running MSE Loss: 70860.0724
+  Batch  200/372 - Running MSE Loss: 71091.9758
+  Batch  300/372 - Running MSE Loss: 71681.4517
+  Batch  372/372 - Running MSE Loss: 53993.5628
+  ↳ Train → MSE: 71671.9222, MAE: 108.9220, RMSE: 267.7161, R²: -inf
+  ↳ Val   → MSE: 223528.4176, MAE: 314.4828, RMSE: 472.7879, R²: -inf
+----------------------------------------------------------------------
+Epoch 17/20
+  Batch  100/372 - Running MSE Loss: 69276.6993
+  Batch  200/372 - Running MSE Loss: 67017.8498
+  Batch  300/372 - Running MSE Loss: 68752.3793
+  Batch  372/372 - Running MSE Loss: 47108.2279
+  ↳ Train → MSE: 67848.8829, MAE: 104.9914, RMSE: 260.4782, R²: -inf
+  ↳ Val   → MSE: 249650.0893, MAE: 342.3643, RMSE: 499.6500, R²: -inf
+----------------------------------------------------------------------
+Epoch 18/20
+  Batch  100/372 - Running MSE Loss: 68081.3839
+  Batch  200/372 - Running MSE Loss: 65183.6255
+  Batch  300/372 - Running MSE Loss: 64272.0364
+  Batch  372/372 - Running MSE Loss: 42551.0322
+  ↳ Train → MSE: 64627.5041, MAE: 102.0024, RMSE: 254.2194, R²: -inf
+  ↳ Val   → MSE: 234852.1021, MAE: 324.8505, RMSE: 484.6154, R²: -inf
+----------------------------------------------------------------------
+Epoch 19/20
+  Batch  100/372 - Running MSE Loss: 65447.2412
+  Batch  200/372 - Running MSE Loss: 60582.9379
+  Batch  300/372 - Running MSE Loss: 59614.4422
+  Batch  372/372 - Running MSE Loss: 41560.5431
+  ↳ Train → MSE: 61219.9865, MAE: 98.0444, RMSE: 247.4267, R²: -inf
+  ↳ Val   → MSE: 245876.6237, MAE: 332.8444, RMSE: 495.8595, R²: -inf
+----------------------------------------------------------------------
+Epoch 20/20
+  Batch  100/372 - Running MSE Loss: 58374.0060
+  Batch  200/372 - Running MSE Loss: 56924.4000
+  Batch  300/372 - Running MSE Loss: 58509.7621
+  Batch  372/372 - Running MSE Loss: 40921.5322
+  ↳ Train → MSE: 57871.2378, MAE: 94.1018, RMSE: 240.5644, R²: -inf
+  ↳ Val   → MSE: 243769.9522, MAE: 330.1994, RMSE: 493.7306, R²: -inf
+----------------------------------------------------------------------

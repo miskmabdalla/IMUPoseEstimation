@@ -36,7 +36,7 @@ input_size = [1280, 720] # [W, H]. Lower resolution will be faster but less prec
 [process]
 multiperson = false   # Saving the motions of all the persons detected and tracked in the video. 
                      # If false, the person saved will be the one with the highest sum of keypoint scores over the video
-show_realtime_results = true
+show_realtime_results = false
 save_vid = true
 save_img = false
 save_pose = true
@@ -137,7 +137,7 @@ interp_gap_smaller_than = 10        # do not interpolate bigger gaps
 fill_large_gaps_with = 'last_value' # 'last_value', 'nan', or 'zeros' 
 
 filter = true
-show_graphs = true            # Show plots of raw and processed results
+show_graphs = false            # Show plots of raw and processed results
 filter_type = 'butterworth'   # butterworth, gaussian, LOESS, median
    [post-processing.butterworth]
    order = 4 

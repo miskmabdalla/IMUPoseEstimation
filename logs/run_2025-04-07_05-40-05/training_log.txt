@@ -1,0 +1,223 @@
+
+Starting training for 20 epochs...
+
+Epoch 1/20
+  Batch  100/660 - Running MSE Loss: 0.9593
+  Batch  200/660 - Running MSE Loss: 0.8621
+  Batch  300/660 - Running MSE Loss: 0.8372
+  Batch  400/660 - Running MSE Loss: 0.7936
+  Batch  500/660 - Running MSE Loss: 0.7553
+  Batch  600/660 - Running MSE Loss: 0.6919
+  Batch  660/660 - Running MSE Loss: 0.4210
+  ↳ Train → MSE: 0.8064, MAE: 0.6120, RMSE: 0.8980, R²: 0.1786
+  ↳ Val   → MSE: 0.6997, MAE: 0.5688, RMSE: 0.8365, R²: 0.2702
+----------------------------------------------------------------------
+Epoch 2/20
+  Batch  100/660 - Running MSE Loss: 0.6818
+  Batch  200/660 - Running MSE Loss: 0.6773
+  Batch  300/660 - Running MSE Loss: 0.6474
+  Batch  400/660 - Running MSE Loss: 0.6091
+  Batch  500/660 - Running MSE Loss: 0.6276
+  Batch  600/660 - Running MSE Loss: 0.6098
+  Batch  660/660 - Running MSE Loss: 0.3463
+  ↳ Train → MSE: 0.6363, MAE: 0.5181, RMSE: 0.7977, R²: 0.3518
+  ↳ Val   → MSE: 0.5594, MAE: 0.4806, RMSE: 0.7480, R²: 0.4158
+----------------------------------------------------------------------
+Epoch 3/20
+  Batch  100/660 - Running MSE Loss: 0.5664
+  Batch  200/660 - Running MSE Loss: 0.5024
+  Batch  300/660 - Running MSE Loss: 0.5350
+  Batch  400/660 - Running MSE Loss: 0.5029
+  Batch  500/660 - Running MSE Loss: 0.4827
+  Batch  600/660 - Running MSE Loss: 0.4360
+  Batch  660/660 - Running MSE Loss: 0.2885
+  ↳ Train → MSE: 0.5019, MAE: 0.4350, RMSE: 0.7084, R²: 0.4887
+  ↳ Val   → MSE: 0.4446, MAE: 0.4077, RMSE: 0.6668, R²: 0.5350
+----------------------------------------------------------------------
+Epoch 4/20
+  Batch  100/660 - Running MSE Loss: 0.4160
+  Batch  200/660 - Running MSE Loss: 0.4055
+  Batch  300/660 - Running MSE Loss: 0.3901
+  Batch  400/660 - Running MSE Loss: 0.3968
+  Batch  500/660 - Running MSE Loss: 0.3947
+  Batch  600/660 - Running MSE Loss: 0.4415
+  Batch  660/660 - Running MSE Loss: 0.2470
+  ↳ Train → MSE: 0.4078, MAE: 0.3817, RMSE: 0.6386, R²: 0.5835
+  ↳ Val   → MSE: 0.3493, MAE: 0.3527, RMSE: 0.5910, R²: 0.6360
+----------------------------------------------------------------------
+Epoch 5/20
+  Batch  100/660 - Running MSE Loss: 0.3423
+  Batch  200/660 - Running MSE Loss: 0.3392
+  Batch  300/660 - Running MSE Loss: 0.3237
+  Batch  400/660 - Running MSE Loss: 0.3495
+  Batch  500/660 - Running MSE Loss: 0.3504
+  Batch  600/660 - Running MSE Loss: 0.3362
+  Batch  660/660 - Running MSE Loss: 0.2025
+  ↳ Train → MSE: 0.3401, MAE: 0.3416, RMSE: 0.5832, R²: 0.6524
+  ↳ Val   → MSE: 0.2966, MAE: 0.3152, RMSE: 0.5446, R²: 0.6892
+----------------------------------------------------------------------
+Epoch 6/20
+  Batch  100/660 - Running MSE Loss: 0.2808
+  Batch  200/660 - Running MSE Loss: 0.2639
+  Batch  300/660 - Running MSE Loss: 0.2979
+  Batch  400/660 - Running MSE Loss: 0.2687
+  Batch  500/660 - Running MSE Loss: 0.3288
+  Batch  600/660 - Running MSE Loss: 0.3725
+  Batch  660/660 - Running MSE Loss: 0.2447
+  ↳ Train → MSE: 0.3116, MAE: 0.3214, RMSE: 0.5582, R²: 0.6812
+  ↳ Val   → MSE: 0.3993, MAE: 0.3779, RMSE: 0.6319, R²: 0.5833
+----------------------------------------------------------------------
+Epoch 7/20
+  Batch  100/660 - Running MSE Loss: 0.3511
+  Batch  200/660 - Running MSE Loss: 0.2961
+  Batch  300/660 - Running MSE Loss: 0.2722
+  Batch  400/660 - Running MSE Loss: 0.2559
+  Batch  500/660 - Running MSE Loss: 0.2769
+  Batch  600/660 - Running MSE Loss: 0.2434
+  Batch  660/660 - Running MSE Loss: 0.1557
+  ↳ Train → MSE: 0.2806, MAE: 0.3047, RMSE: 0.5297, R²: 0.7131
+  ↳ Val   → MSE: 0.2246, MAE: 0.2679, RMSE: 0.4739, R²: 0.7646
+----------------------------------------------------------------------
+Epoch 8/20
+  Batch  100/660 - Running MSE Loss: 0.2123
+  Batch  200/660 - Running MSE Loss: 0.2208
+  Batch  300/660 - Running MSE Loss: 0.2341
+  Batch  400/660 - Running MSE Loss: 0.2598
+  Batch  500/660 - Running MSE Loss: 0.2121
+  Batch  600/660 - Running MSE Loss: 0.1795
+  Batch  660/660 - Running MSE Loss: 0.1072
+  ↳ Train → MSE: 0.2161, MAE: 0.2624, RMSE: 0.4648, R²: 0.7788
+  ↳ Val   → MSE: 0.1736, MAE: 0.2336, RMSE: 0.4167, R²: 0.8184
+----------------------------------------------------------------------
+Epoch 9/20
+  Batch  100/660 - Running MSE Loss: 0.1723
+  Batch  200/660 - Running MSE Loss: 0.1752
+  Batch  300/660 - Running MSE Loss: 0.2029
+  Batch  400/660 - Running MSE Loss: 0.2023
+  Batch  500/660 - Running MSE Loss: 0.2300
+  Batch  600/660 - Running MSE Loss: 0.2035
+  Batch  660/660 - Running MSE Loss: 0.1435
+  ↳ Train → MSE: 0.2015, MAE: 0.2506, RMSE: 0.4489, R²: 0.7941
+  ↳ Val   → MSE: 0.2153, MAE: 0.2641, RMSE: 0.4640, R²: 0.7760
+----------------------------------------------------------------------
+Epoch 10/20
+  Batch  100/660 - Running MSE Loss: 0.1966
+  Batch  200/660 - Running MSE Loss: 0.1611
+  Batch  300/660 - Running MSE Loss: 0.1472
+  Batch  400/660 - Running MSE Loss: 0.1542
+  Batch  500/660 - Running MSE Loss: 0.1337
+  Batch  600/660 - Running MSE Loss: 0.1221
+  Batch  660/660 - Running MSE Loss: 0.0880
+  ↳ Train → MSE: 0.1519, MAE: 0.2192, RMSE: 0.3898, R²: 0.8442
+  ↳ Val   → MSE: 0.1337, MAE: 0.2053, RMSE: 0.3657, R²: 0.8598
+----------------------------------------------------------------------
+Epoch 11/20
+  Batch  100/660 - Running MSE Loss: 0.1254
+  Batch  200/660 - Running MSE Loss: 0.1264
+  Batch  300/660 - Running MSE Loss: 0.1311
+  Batch  400/660 - Running MSE Loss: 0.1864
+  Batch  500/660 - Running MSE Loss: 0.2465
+  Batch  600/660 - Running MSE Loss: 0.2065
+  Batch  660/660 - Running MSE Loss: 0.1057
+  ↳ Train → MSE: 0.1709, MAE: 0.2248, RMSE: 0.4135, R²: 0.8253
+  ↳ Val   → MSE: 0.1826, MAE: 0.2303, RMSE: 0.4273, R²: 0.8100
+----------------------------------------------------------------------
+Epoch 12/20
+  Batch  100/660 - Running MSE Loss: 0.1725
+  Batch  200/660 - Running MSE Loss: 0.1554
+  Batch  300/660 - Running MSE Loss: 0.1489
+  Batch  400/660 - Running MSE Loss: 0.1296
+  Batch  500/660 - Running MSE Loss: 0.1299
+  Batch  600/660 - Running MSE Loss: 0.1496
+  Batch  660/660 - Running MSE Loss: 0.1200
+  ↳ Train → MSE: 0.1524, MAE: 0.2121, RMSE: 0.3904, R²: 0.8451
+  ↳ Val   → MSE: 0.2169, MAE: 0.2564, RMSE: 0.4657, R²: 0.7758
+----------------------------------------------------------------------
+Epoch 13/20
+  Batch  100/660 - Running MSE Loss: 0.2215
+  Batch  200/660 - Running MSE Loss: 0.1960
+  Batch  300/660 - Running MSE Loss: 0.1955
+  Batch  400/660 - Running MSE Loss: 0.1289
+  Batch  500/660 - Running MSE Loss: 0.1447
+  Batch  600/660 - Running MSE Loss: 0.1259
+  Batch  660/660 - Running MSE Loss: 0.0791
+  ↳ Train → MSE: 0.1654, MAE: 0.2225, RMSE: 0.4068, R²: 0.8306
+  ↳ Val   → MSE: 0.1311, MAE: 0.1976, RMSE: 0.3621, R²: 0.8632
+----------------------------------------------------------------------
+Epoch 14/20
+  Batch  100/660 - Running MSE Loss: 0.1220
+  Batch  200/660 - Running MSE Loss: 0.0933
+  Batch  300/660 - Running MSE Loss: 0.1195
+  Batch  400/660 - Running MSE Loss: 0.1076
+  Batch  500/660 - Running MSE Loss: 0.1006
+  Batch  600/660 - Running MSE Loss: 0.1098
+  Batch  660/660 - Running MSE Loss: 0.0593
+  ↳ Train → MSE: 0.1079, MAE: 0.1801, RMSE: 0.3285, R²: 0.8892
+  ↳ Val   → MSE: 0.1094, MAE: 0.1808, RMSE: 0.3308, R²: 0.8855
+----------------------------------------------------------------------
+Epoch 15/20
+  Batch  100/660 - Running MSE Loss: 0.0906
+  Batch  200/660 - Running MSE Loss: 0.0789
+  Batch  300/660 - Running MSE Loss: 0.0898
+  Batch  400/660 - Running MSE Loss: 0.0826
+  Batch  500/660 - Running MSE Loss: 0.0837
+  Batch  600/660 - Running MSE Loss: 0.0708
+  Batch  660/660 - Running MSE Loss: 0.0376
+  ↳ Train → MSE: 0.0809, MAE: 0.1593, RMSE: 0.2845, R²: 0.9165
+  ↳ Val   → MSE: 0.0664, MAE: 0.1477, RMSE: 0.2577, R²: 0.9300
+----------------------------------------------------------------------
+Epoch 16/20
+  Batch  100/660 - Running MSE Loss: 0.0603
+  Batch  200/660 - Running MSE Loss: 0.0726
+  Batch  300/660 - Running MSE Loss: 0.0836
+  Batch  400/660 - Running MSE Loss: 0.0647
+  Batch  500/660 - Running MSE Loss: 0.1842
+  Batch  600/660 - Running MSE Loss: 0.1902
+  Batch  660/660 - Running MSE Loss: 0.0914
+  ↳ Train → MSE: 0.1132, MAE: 0.1778, RMSE: 0.3365, R²: 0.8839
+  ↳ Val   → MSE: 0.1242, MAE: 0.1978, RMSE: 0.3524, R²: 0.8695
+----------------------------------------------------------------------
+Epoch 17/20
+  Batch  100/660 - Running MSE Loss: 0.0960
+  Batch  200/660 - Running MSE Loss: 0.0943
+  Batch  300/660 - Running MSE Loss: 0.0915
+  Batch  400/660 - Running MSE Loss: 0.0740
+  Batch  500/660 - Running MSE Loss: 0.0659
+  Batch  600/660 - Running MSE Loss: 0.0630
+  Batch  660/660 - Running MSE Loss: 0.0416
+  ↳ Train → MSE: 0.0798, MAE: 0.1616, RMSE: 0.2824, R²: 0.9178
+  ↳ Val   → MSE: 0.0684, MAE: 0.1486, RMSE: 0.2615, R²: 0.9282
+----------------------------------------------------------------------
+Epoch 18/20
+  Batch  100/660 - Running MSE Loss: 0.0704
+  Batch  200/660 - Running MSE Loss: 0.0585
+  Batch  300/660 - Running MSE Loss: 0.0596
+  Batch  400/660 - Running MSE Loss: 0.0603
+  Batch  500/660 - Running MSE Loss: 0.0807
+  Batch  600/660 - Running MSE Loss: 0.0653
+  Batch  660/660 - Running MSE Loss: 0.0588
+  ↳ Train → MSE: 0.0687, MAE: 0.1459, RMSE: 0.2621, R²: 0.9296
+  ↳ Val   → MSE: 0.0841, MAE: 0.1587, RMSE: 0.2899, R²: 0.9117
+----------------------------------------------------------------------
+Epoch 19/20
+  Batch  100/660 - Running MSE Loss: 0.0771
+  Batch  200/660 - Running MSE Loss: 0.0662
+  Batch  300/660 - Running MSE Loss: 0.0589
+  Batch  400/660 - Running MSE Loss: 0.0547
+  Batch  500/660 - Running MSE Loss: 0.0507
+  Batch  600/660 - Running MSE Loss: 0.0720
+  Batch  660/660 - Running MSE Loss: 0.0957
+  ↳ Train → MSE: 0.0719, MAE: 0.1471, RMSE: 0.2682, R²: 0.9257
+  ↳ Val   → MSE: 0.1701, MAE: 0.2221, RMSE: 0.4124, R²: 0.8230
+----------------------------------------------------------------------
+Epoch 20/20
+  Batch  100/660 - Running MSE Loss: 0.1520
+  Batch  200/660 - Running MSE Loss: 0.0930
+  Batch  300/660 - Running MSE Loss: 0.0746
+  Batch  400/660 - Running MSE Loss: 0.0626
+  Batch  500/660 - Running MSE Loss: 0.0574
+  Batch  600/660 - Running MSE Loss: 0.0546
+  Batch  660/660 - Running MSE Loss: 0.0335
+  ↳ Train → MSE: 0.0800, MAE: 0.1553, RMSE: 0.2828, R²: 0.9181
+  ↳ Val   → MSE: 0.0662, MAE: 0.1462, RMSE: 0.2573, R²: 0.9306
+----------------------------------------------------------------------

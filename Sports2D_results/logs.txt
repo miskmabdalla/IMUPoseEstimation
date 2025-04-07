@@ -2,296 +2,31 @@
 
 ---------------------------------------------------------------------
 Processing trial_1.mp4
-On Saturday 05. April 2025, 01:16:47
----------------------------------------------------------------------
-
-
----------------------------------------------------------------------
-Processing trial_1.mp4
-On Saturday 05. April 2025, 01:36:21
+On Monday 07. April 2025, 04:22:55
 ---------------------------------------------------------------------
 Using HALPE_26 model (body and feet) for pose estimation.
+Error: Pose estimation failed. Check in Config.toml that pose_model and mode are valid.
 
-No valid CUDA installation found: using OpenVINO backend with CPU.
+
+---------------------------------------------------------------------
+Processing trial_2.mp4
+On Monday 07. April 2025, 04:22:55
+---------------------------------------------------------------------
+Using HALPE_26 model (body and feet) for pose estimation.
+Error: Pose estimation failed. Check in Config.toml that pose_model and mode are valid.
+
+
+---------------------------------------------------------------------
+Processing trial_3.mp4
+On Monday 07. April 2025, 04:22:55
+---------------------------------------------------------------------
+Using HALPE_26 model (body and feet) for pose estimation.
 Error: Pose estimation failed. Check in Config.toml that pose_model and mode are valid.
 
 
 ---------------------------------------------------------------------
 Processing trial_1.mp4
-On Saturday 05. April 2025, 01:38:23
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-
-
----------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 01:39:24
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Failed to grab frame 1305.
-Failed to grab frame 1306.
-Failed to grab frame 1307.
-Failed to grab frame 1308.
-Failed to grab frame 1309.
-Failed to grab frame 1310.
-Failed to grab frame 1311.
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
-
-Post-processing pose:
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person01.trc.
-
-Converting pose to meters:
-Person #1 not detected in the video. Calibrating on person #0 instead.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -82.82°), xy_origin: auto (estimation: [0, -12137]) px.
-- Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
-
-Post-processing angles (without inverse kinematics):
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the -82.82° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person01.mot.
-
-Post-processing angles (with inverse kinematics):
-- Person 0: Running marker augmentation and inverse kinematics.
-Running marker augmentation...
-Using Stanford augmenter model: v0.3
-
-
----------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 01:49:34
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Failed to grab frame 1305.
-Failed to grab frame 1306.
-Failed to grab frame 1307.
-Failed to grab frame 1308.
-Failed to grab frame 1309.
-Failed to grab frame 1310.
-Failed to grab frame 1311.
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
-
-Post-processing pose:
-- Person 2: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person02.trc.
-
-Converting pose to meters:
-Person #2 not detected in the video. Calibrating on person #0 instead.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -33.25°), xy_origin: auto (estimation: [0, -516]) px.
-- Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
-
-Post-processing angles (without inverse kinematics):
-- Person 2: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the -33.25° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person02.mot.
-
-Post-processing angles (with inverse kinematics):
-- Person 0: Running marker augmentation and inverse kinematics.
-Running marker augmentation...
-Using Stanford augmenter model: v0.3
-Augmented marker coordinates are stored at /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc.
-Augmented trc results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d.
-
-Running inverse kinematics...
-Processing TRC file: /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc
-
-Scaling...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Scaled model saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM_scaled.osim
-
-Inverse Kinematics...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Joint angle data saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM.mot
-
-.osim model and .mot motion file results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics.
-
-
-Processing trial_4.mp4 took 411.98 s.
-
-
----------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 01:58:50
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Failed to grab frame 1305.
-Failed to grab frame 1306.
-Failed to grab frame 1307.
-Failed to grab frame 1308.
-Failed to grab frame 1309.
-Failed to grab frame 1310.
-Failed to grab frame 1311.
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
-
-Post-processing pose:
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person01.trc.
-
-Converting pose to meters:
-Person #1 not detected in the video. Calibrating on person #0 instead.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -82.77°), xy_origin: auto (estimation: [0, -12040]) px.
-- Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
-
-Post-processing angles (without inverse kinematics):
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the -82.77° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person01.mot.
-
-Post-processing angles (with inverse kinematics):
-- Person 0: Running marker augmentation and inverse kinematics.
-Running marker augmentation...
-Using Stanford augmenter model: v0.3
-Augmented marker coordinates are stored at /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc.
-Augmented trc results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d.
-
-Running inverse kinematics...
-Processing TRC file: /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc
-
-Scaling...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Scaled model saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM_scaled.osim
-
-Inverse Kinematics...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Joint angle data saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM.mot
-
-.osim model and .mot motion file results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics.
-
-
-Processing trial_4.mp4 took 393.12 s.
-
-
----------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 02:06:24
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Failed to grab frame 1305.
-Failed to grab frame 1306.
-Failed to grab frame 1307.
-Failed to grab frame 1308.
-Failed to grab frame 1309.
-Failed to grab frame 1310.
-Failed to grab frame 1311.
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
-
-Post-processing pose:
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person01.trc.
-
-Converting pose to meters:
-Person #1 not detected in the video. Calibrating on person #0 instead.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -82.84°), xy_origin: auto (estimation: [0, -12160]) px.
-- Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
-
-Post-processing angles (without inverse kinematics):
-- Person 1: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
-Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the -82.84° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person01.mot.
-
-Post-processing angles (with inverse kinematics):
-- Person 0: Running marker augmentation and inverse kinematics.
-Running marker augmentation...
-Using Stanford augmenter model: v0.3
-Augmented marker coordinates are stored at /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc.
-Augmented trc results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d.
-
-Running inverse kinematics...
-Processing TRC file: /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc
-
-Scaling...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Scaled model saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM_scaled.osim
-
-Inverse Kinematics...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Joint angle data saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM.mot
-
-.osim model and .mot motion file results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics.
-
-
-Processing trial_4.mp4 took 428.87 s.
-
-
----------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 02:18:00
+On Monday 07. April 2025, 04:24:02
 ---------------------------------------------------------------------
 Using HALPE_26 model (body and feet) for pose estimation.
 
@@ -307,217 +42,53 @@ Skipping left wrist angle computation because at least one of the following keyp
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
-
-Post-processing pose:
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Converting pose to meters:
-All frames have speed close to zero. Make sure the person is moving and correctly detected, or change close_to_zero_speed to a lower value. Not restricting the speeds to be above any threshold.
-Could not estimate the floor angle and xy_origin for person 0. Make sure that the full body is visible. Using floor angle = 0° and xy_origin = [960.0, 540.0] px.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 0.0°), xy_origin: auto (estimation: [960, 540]) px.
-
-Post-processing angles (without inverse kinematics):
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Post-processing angles (with inverse kinematics):
-Running marker augmentation...
-Number of subject heights does not match number of TRC files. Missing heights are set to {default_height}m.
-Number of subject masses does not match number of TRC files. Missing masses are set to 70kg.
-Using Stanford augmenter model: v0.3
-Augmented marker coordinates are stored at /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc.
-Augmented trc results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d.
-
-Running inverse kinematics...
-Processing TRC file: /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/pose-3d/trial_4_Sports2D_m_person00_LSTM.trc
-
-Scaling...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Scaled model saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM_scaled.osim
-
-Inverse Kinematics...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/opensim_logs.txt.
-	Joint angle data saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics/trial_4_Sports2D_m_person00_LSTM.mot
-
-.osim model and .mot motion file results saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/kinematics.
-
-
-Processing trial_4.mp4 took 318.98 s.
-
-
----------------------------------------------------------------------
-Processing trial_1.mp4
-On Saturday 05. April 2025, 02:27:53
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D.mp4.
-
-Post-processing pose:
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Converting pose to meters:
-All frames have speed close to zero. Make sure the person is moving and correctly detected, or change close_to_zero_speed to a lower value. Not restricting the speeds to be above any threshold.
-Could not estimate the floor angle and xy_origin for person 0. Make sure that the full body is visible. Using floor angle = 0° and xy_origin = [960.0, 540.0] px.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 0.0°), xy_origin: auto (estimation: [960, 540]) px.
-
-Post-processing angles (without inverse kinematics):
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Post-processing angles (with inverse kinematics):
-Running marker augmentation...
-
-
----------------------------------------------------------------------
-Processing trial_1.mp4
-On Saturday 05. April 2025, 02:28:56
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D.mp4.
-
-Post-processing pose:
-- Person 1: Less than 4 valid frames. Deleting person.
-
-Converting pose to meters:
-Person #1 not detected in the video. Calibrating on person #0 instead.
-All frames have speed close to zero. Make sure the person is moving and correctly detected, or change close_to_zero_speed to a lower value. Not restricting the speeds to be above any threshold.
-Could not estimate the floor angle and xy_origin for person 0. Make sure that the full body is visible. Using floor angle = 0° and xy_origin = [960.0, 540.0] px.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 0.0°), xy_origin: auto (estimation: [960, 540]) px.
-
-Post-processing angles (without inverse kinematics):
-- Person 1: Less than 4 valid frames. Deleting person.
-
-Post-processing angles (with inverse kinematics):
-Running marker augmentation...
-
-
----------------------------------------------------------------------
-Processing trial_3-fps.mp4
-On Saturday 05. April 2025, 02:30:14
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-No valid CUDA installation found: using OpenVINO backend with CPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/trial_3-fps_Sports2D.mp4.
-
-Post-processing pose:
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Converting pose to meters:
-All frames have speed close to zero. Make sure the person is moving and correctly detected, or change close_to_zero_speed to a lower value. Not restricting the speeds to be above any threshold.
-Could not estimate the floor angle and xy_origin for person 0. Make sure that the full body is visible. Using floor angle = 0° and xy_origin = [540.0, 960.0] px.
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 0.0°), xy_origin: auto (estimation: [540, 960]) px.
-
-Post-processing angles (without inverse kinematics):
-- Person 0: Less than 4 valid frames. Deleting person.
-
-Post-processing angles (with inverse kinematics):
-Running marker augmentation...
-
-
----------------------------------------------------------------------
-Processing trial_3-fps.mp4
-On Saturday 05. April 2025, 02:33:05
----------------------------------------------------------------------
-Using HALPE_26 model (body and feet) for pose estimation.
-
-Valid MPS installation found: using ONNXRuntime backend with GPU.
-
-Pose tracking set up for "Body_with_feet" model.
-Mode: balanced.
-
-Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
-keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
-Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
-Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
-
-Processing video stream...
-Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/trial_3-fps_Sports2D.mp4.
+Processed video saved to /home/fadluw/git/misk/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/trial_3-fps_Sports2D_px_person00.trc.
+Pose in pixels saved to /home/fadluw/git/misk/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D_px_person00.trc.
 
 Converting pose to meters:
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 4.53°), xy_origin: auto (estimation: [0, 1607]) px.
+Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -0.44°), xy_origin: auto (estimation: [0, 1611]) px.
 - Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/trial_3-fps_Sports2D_m_person00.trc. 
+Pose in meters saved to /home/fadluw/git/misk/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D_m_person00.trc. 
 
 Post-processing angles (without inverse kinematics):
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the 4.53° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/trial_3-fps_Sports2D_angles_person00.mot.
+Correcting segment angles by removing the -0.44° floor angle.
+Angles saved to /home/fadluw/git/misk/Sports2D_results/trial_1_Sports2D/trial_1_Sports2D_angles_person00.mot.
 
-Post-processing angles (with inverse kinematics):
-- Person 0: Running marker augmentation and inverse kinematics.
-Running marker augmentation...
-Using Stanford augmenter model: v0.3
-Augmented marker coordinates are stored at /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/pose-3d/trial_3-fps_Sports2D_m_person00_LSTM.trc.
-Augmented trc results saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/pose-3d.
-
-Running inverse kinematics...
-Processing TRC file: /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/pose-3d/trial_3-fps_Sports2D_m_person00_LSTM.trc
-
-Scaling...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/kinematics/opensim_logs.txt.
-	Scaled model saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/kinematics/trial_3-fps_Sports2D_m_person00_LSTM_scaled.osim
-
-Inverse Kinematics...
-	Done. OpenSim logs saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/kinematics/opensim_logs.txt.
-	Joint angle data saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/kinematics/trial_3-fps_Sports2D_m_person00_LSTM.mot
-
-.osim model and .mot motion file results saved to /Users/whiskymisky/masters/Sports2D_results/trial_3-fps_Sports2D/kinematics.
-
-
-Processing trial_3-fps.mp4 took 274.20 s.
+Processing trial_1.mp4 took 466.23 s.
 
 
 ---------------------------------------------------------------------
-Processing trial_4.mp4
-On Saturday 05. April 2025, 02:38:06
+Processing trial_2.mp4
+On Monday 07. April 2025, 04:31:48
 ---------------------------------------------------------------------
 Using HALPE_26 model (body and feet) for pose estimation.
 
-Valid MPS installation found: using ONNXRuntime backend with GPU.
+Valid CUDA installation found: using ONNXRuntime backend with GPU.
+
+Pose tracking set up for "Body_with_feet" model.
+Mode: balanced.
+
+Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
+keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
+Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
+
+Processing video stream...
+
+
+---------------------------------------------------------------------
+Processing trial_2.mp4
+On Monday 07. April 2025, 04:33:34
+---------------------------------------------------------------------
+Using HALPE_26 model (body and feet) for pose estimation.
+
+Valid CUDA installation found: using ONNXRuntime backend with GPU.
 
 Pose tracking set up for "Body_with_feet" model.
 Mode: balanced.
@@ -529,22 +100,120 @@ Skipping left wrist angle computation because at least one of the following keyp
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
+Processed video saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 6 Hz.
-Pose in pixels saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person00.trc.
+Pose in pixels saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_px_person00.trc.
 
 Converting pose to meters:
-Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: 26.03°), xy_origin: auto (estimation: [0, 1355]) px.
+Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -4.12°), xy_origin: auto (estimation: [0, 1628]) px.
 - Person 0: Seen from the front.
-Pose in meters saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
+Pose in meters saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_m_person00.trc. 
 
 Post-processing angles (without inverse kinematics):
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 6 Hz.
-Correcting segment angles by removing the 26.03° floor angle.
-Angles saved to /Users/whiskymisky/masters/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person00.mot.
+Correcting segment angles by removing the -4.12° floor angle.
+Angles saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_angles_person00.mot.
 
-Processing trial_4.mp4 took 86.36 s.
+Processing trial_2.mp4 took 201.89 s.
+
+
+---------------------------------------------------------------------
+Processing trial_3.mp4
+On Monday 07. April 2025, 04:36:56
+---------------------------------------------------------------------
+Using HALPE_26 model (body and feet) for pose estimation.
+
+Valid CUDA installation found: using ONNXRuntime backend with GPU.
+
+Pose tracking set up for "Body_with_feet" model.
+Mode: balanced.
+
+Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
+keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
+Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /home/fadluw/git/misk/Sports2D_results/trial_3_Sports2D/trial_3_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Pose in pixels saved to /home/fadluw/git/misk/Sports2D_results/trial_3_Sports2D/trial_3_Sports2D_px_person00.trc.
+
+Converting pose to meters:
+Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -3.05°), xy_origin: auto (estimation: [0, 1452]) px.
+- Person 0: Seen from the front.
+Pose in meters saved to /home/fadluw/git/misk/Sports2D_results/trial_3_Sports2D/trial_3_Sports2D_m_person00.trc. 
+
+Post-processing angles (without inverse kinematics):
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Correcting segment angles by removing the -3.05° floor angle.
+Angles saved to /home/fadluw/git/misk/Sports2D_results/trial_3_Sports2D/trial_3_Sports2D_angles_person00.mot.
+
+Processing trial_3.mp4 took 127.66 s.
+
+
+---------------------------------------------------------------------
+Processing trial_4.mp4
+On Monday 07. April 2025, 04:39:04
+---------------------------------------------------------------------
+Using HALPE_26 model (body and feet) for pose estimation.
+
+Valid CUDA installation found: using ONNXRuntime backend with GPU.
+
+Pose tracking set up for "Body_with_feet" model.
+Mode: balanced.
+
+Persons are detected every 4 frames and tracked inbetween. Multi-person is not selected. Tracking is done with sports2d.
+keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+Skipping right wrist angle computation because at least one of the following keypoints is not provided by the model: ['RElbow', 'RWrist', 'RIndex'].
+Skipping left wrist angle computation because at least one of the following keypoints is not provided by the model: ['LElbow', 'LWrist', 'LIndex'].
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /home/fadluw/git/misk/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Pose in pixels saved to /home/fadluw/git/misk/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_px_person00.trc.
+
+Converting pose to meters:
+Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -2.14°), xy_origin: auto (estimation: [0, 1516]) px.
+- Person 0: Seen from the front.
+Pose in meters saved to /home/fadluw/git/misk/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_m_person00.trc. 
+
+Post-processing angles (without inverse kinematics):
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Correcting segment angles by removing the -2.14° floor angle.
+Angles saved to /home/fadluw/git/misk/Sports2D_results/trial_4_Sports2D/trial_4_Sports2D_angles_person00.mot.
+
+Processing trial_4.mp4 took 213.33 s.
+Video processing completed.
+Processed video saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Pose in pixels saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_px_person00.trc.
+
+Converting pose to meters:
+Using height of person #0 (1.65m) to convert coordinates in meters. Floor angle: auto (estimation: -4.12°), xy_origin: auto (estimation: [0, 1628]) px.
+- Person 0: Seen from the front.
+Pose in meters saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_m_person00.trc. 
+
+Post-processing angles (without inverse kinematics):
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 6 Hz.
+Correcting segment angles by removing the -4.12° floor angle.
+Angles saved to /home/fadluw/git/misk/Sports2D_results/trial_2_Sports2D/trial_2_Sports2D_angles_person00.mot.
+
+Processing trial_2.mp4 took 981.85 s.
