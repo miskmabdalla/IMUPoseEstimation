@@ -1,0 +1,36 @@
+======================================================================
+Training started: 2025-04-05 15:05:12
+Device: CPU
+Hyperparameters:
+  Hidden Size   = 128
+  Num Layers    = 2
+  Batch Size    = 32
+  Epochs        = 20
+  Learning Rate = 0.001
+  Window Size   = 50
+======================================================================
+
+Starting training for 20 epochs...
+
+Epoch 1/20
+  Batch  100/270 - Running MSE Loss: 0.1069
+  Batch  200/270 - Running MSE Loss: 0.0844
+  Batch  270/270 - Running MSE Loss: 0.0592
+  ↳ Train → MSE: 0.0928, MAE: 0.2595, RMSE: 0.3046, R²: -0.1499
+  ↳ Val   → MSE: 0.0861, MAE: 0.2533, RMSE: 0.2935, R²: -0.0581
+----------------------------------------------------------------------
+Epoch 2/20
+  Batch  100/270 - Running MSE Loss: 0.0842
+  Batch  200/270 - Running MSE Loss: 0.0835
+  Batch  270/270 - Running MSE Loss: 0.0587
+  ↳ Train → MSE: 0.0839, MAE: 0.2503, RMSE: 0.2896, R²: -0.0382
+  ↳ Val   → MSE: 0.0862, MAE: 0.2540, RMSE: 0.2936, R²: -0.0587
+----------------------------------------------------------------------
+Epoch 3/20
+  Batch  100/270 - Running MSE Loss: 0.0834
+  Batch  200/270 - Running MSE Loss: 0.0833
+  Batch  270/270 - Running MSE Loss: 0.0586
+  ↳ Train → MSE: 0.0835, MAE: 0.2497, RMSE: 0.2889, R²: -0.0344
+  ↳ Val   → MSE: 0.0861, MAE: 0.2537, RMSE: 0.2935, R²: -0.0578
+----------------------------------------------------------------------
+Epoch 4/20

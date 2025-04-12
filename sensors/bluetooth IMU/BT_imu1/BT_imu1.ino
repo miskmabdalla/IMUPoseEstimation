@@ -2,55 +2,48 @@
 #include <LSM6DS3.h>
 #include <Wire.h>
 
-// Define onboard RGB LED pins
 #define RED_LED LED_RED
 #define GREEN_LED LED_GREEN
 #define BLUE_LED LED_BLUE
 
-// Create a BLE service
 BLEService imuService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLECharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 168);
+BLEByteCharacteristic controlChar("19B10002-E8F2-537E-4F6C-D104768A1214", BLEWrite);
+bool recording = false;
 
-// Create a BLE characteristic for IMU data
-BLEStringCharacteristic imuDataCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 200);
-
-// Create an instance of LSM6DS3 IMU sensor
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
-// Batching config
-const int batchSize = 3;
-String imuBuffer[batchSize];
+const int samplesPerBatch = 6;
+uint8_t batchedData[168];  // 6 samples * 28 bytes (4 timestamp + 6*4 bytes float)
 int bufferIndex = 0;
-const unsigned long sampleInterval = 20;  // 50 Hz
+const unsigned long sampleInterval = 20;
 unsigned long lastSampleTime = 0;
 
 void setup() {
-  Serial.begin(9600);
-  while (!Serial && millis() < 3000);  // Wait for Serial (3s max) - helps with debugging
+  Serial.begin(115200);
+  imuService.addCharacteristic(controlChar);
+  while (!Serial && millis() < 3000);
 
-  // Set LED pins as outputs
   pinMode(RED_LED, OUTPUT);
   pinMode(GREEN_LED, OUTPUT);
   pinMode(BLUE_LED, OUTPUT);
 
-  // --- SOLID RED ON STARTUP ---
   digitalWrite(GREEN_LED, HIGH);
   digitalWrite(BLUE_LED, HIGH);
-  digitalWrite(RED_LED, LOW);  // RED ON (Solid)
+  digitalWrite(RED_LED, LOW);
 
-  delay(500);  // Ensure visibility
+  delay(500);
 
-  // Initialize IMU
   if (myIMU.begin() != 0) {
     Serial.println("IMU Device error");
   } else {
-    Serial.println("aX,aY,aZ,gX,gY,gZ");
+    Serial.println("Using timestamped float batch mode");
   }
 
-  delay(300);  // Small delay before BLE starts
+  delay(300);
 
-  // Initialize BLE
   if (!BLE.begin()) {
-    Serial.println("Starting Bluetooth Low Energy module failed!");
+    Serial.println("BLE start failed");
     while (1);
   }
 
@@ -59,8 +52,7 @@ void setup() {
   imuService.addCharacteristic(imuDataCharacteristic);
   BLE.addService(imuService);
   BLE.advertise();
-
-  Serial.println("BLE IMU device is now advertising");
+  Serial.println("BLE IMU device advertising");
 }
 
 void loop() {
@@ -73,22 +65,26 @@ void loop() {
     Serial.print("Connected to central: ");
     Serial.println(central.address());
 
-    // Turn OFF RED LED and start BLUE blinking
     digitalWrite(RED_LED, HIGH);
 
     while (central.connected()) {
       unsigned long currentMillis = millis();
 
-      // Blink BLUE LED every 500ms
       if (currentMillis - previousMillis >= 500) {
         previousMillis = currentMillis;
         ledState = !ledState;
         digitalWrite(BLUE_LED, ledState ? LOW : HIGH);
       }
+    if (controlChar.written() && recording == false) {
+      if (controlChar.value() == 1) {
+        recording = true;
+        digitalWrite(GREEN_LED, LOW);  // ON
+      }
+    }
 
-      // Sampling logic
-      if (millis() - lastSampleTime >= sampleInterval) {
-        lastSampleTime += sampleInterval;
+      unsigned long now = millis();
+      if (now - lastSampleTime >= sampleInterval) {
+        lastSampleTime = now;
 
         float aX = myIMU.readFloatAccelX();
         float aY = myIMU.readFloatAccelY();
@@ -97,34 +93,52 @@ void loop() {
         float gY = myIMU.readFloatGyroY();
         float gZ = myIMU.readFloatGyroZ();
 
-        // Store sample in batch buffer
-        imuBuffer[bufferIndex] = String(aX, 3) + "," + String(aY, 3) + "," + String(aZ, 3) + "," +
-                                 String(gX, 3) + "," + String(gY, 3) + "," + String(gZ, 3);
+        bool valid = isfinite(aX) && isfinite(aY) && isfinite(aZ) &&
+                     isfinite(gX) && isfinite(gY) && isfinite(gZ);
+        if (!valid) {
+          Serial.println("⚠️ Invalid IMU reading, skipping");
+          continue;
+        }
+
+        int offset = bufferIndex * 28;
+
+        uint32_t ts = millis();
+        memcpy(&batchedData[offset], &ts, 4);  // store timestamp (4 bytes)
+
+        float values[6] = {aX, aY, aZ, gX, gY, gZ};
+        memcpy(&batchedData[offset + 4], values, sizeof(values));  // store 6 floats
+
         bufferIndex++;
 
-        // If buffer full, send BLE notification with all samples
-        if (bufferIndex == batchSize) {
-          String payload = imuBuffer[0];
-          for (int i = 1; i < batchSize; i++) {
-            payload += "\n" + imuBuffer[i];
+        if (bufferIndex == samplesPerBatch) {
+          bool sent = imuDataCharacteristic.writeValue(batchedData, sizeof(batchedData));
+          Serial.println(sent ? "Batch sent" : "BLE write failed");
+          delay(1);  // Small throttle to avoid BLE flooding
+
+
+          for (int i = 0; i < samplesPerBatch; i++) {
+            int off = i * 28;
+            uint32_t t;
+            memcpy(&t, &batchedData[off], 4);
+            Serial.print("t="); Serial.print(t); Serial.print("ms | ");
+            for (int j = 0; j < 6; j++) {
+              float val;
+              memcpy(&val, &batchedData[off + 4 + j * 4], 4);
+              Serial.print(val, 3);
+              Serial.print(j < 5 ? ", " : "\n");
+            }
           }
 
-          imuDataCharacteristic.writeValue(payload);
-
-          Serial.println(payload);
-          Serial.print("Payload length: ");
-          Serial.println(payload.length());
-
-          bufferIndex = 0;  // Reset buffer
+          bufferIndex = 0;
         }
       }
     }
-
+    recording = false;
     Serial.print("Disconnected from central: ");
     Serial.println(central.address());
   }
 
-  // --- SOLID RED WHEN NOT CONNECTED ---
-  digitalWrite(RED_LED, LOW);  // Ensure RED LED is solid
-  digitalWrite(BLUE_LED, HIGH);  // Ensure BLUE is OFF
+  digitalWrite(RED_LED, LOW);
+  digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(GREEN_LED, HIGH);
 }

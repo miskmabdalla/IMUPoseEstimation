@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pynput.keyboard import Listener
 from pathlib import Path
+import struct
+import signal
 
 
 device_list = {}
@@ -28,7 +30,17 @@ def detection_callback(device, advertisement_data):
             print(f"Found Arduino - Address: {device.address}, Service UUID: {advertisement_data.service_uuids[0]}")
 
 
+def decode_batched_floats(data, samples_per_batch=6, floats_per_sample=6):
+    # expected_len = samples_per_batch * floats_per_sample * 4
+    # if len(data) != expected_len:
+    #     print(f"Unexpected packet size: {len(data)} bytes")
+    #     return []
 
+    # Unpack all floats
+    floats = struct.unpack("<" + "f" * samples_per_batch * floats_per_sample, data)
+
+    # Split into per-sample groups
+    return [floats[i:i+floats_per_sample] for i in range(0, len(floats), floats_per_sample)]
 
 
 async def scanning():
@@ -59,14 +71,14 @@ class IMUSensor:
   
 
     async def read_characteristic(self):
-        """Connects to the sensor and subscribes to notifications."""
         async with BleakClient(self.device_address) as client:
             if not client.is_connected:
                 print(f"Failed to connect to {self.device_address}")
                 return
 
             print(f"Connected to {self.device_address}")
-            print("Discovering services and characteristics...")
+
+            await client.get_services()
             for service in client.services:
                 for char in service.characteristics:
                     if "notify" in char.properties:
@@ -74,38 +86,34 @@ class IMUSensor:
                         break
 
             if not self.device_char_UUID:
-                print(f"No suitable characteristic found for {self.device_address}.")
-                return
+                raise RuntimeError(f"No suitable characteristic found for {self.device_address}")
 
-            print(f"Subscribing to characteristic {self.device_char_UUID}...")
-
+            # --- Define the handler BEFORE calling start_notify ---
             async def notification_handler(sender, data):
-                """Handles incoming sensor data with extrapolated timestamps."""
                 if not pressed_flag:
                     return
-
-                decoded = data.decode("utf-8").strip()
-                lines = decoded.split("\n")
-
-                # Compute timestamps by back-calculating from current time
-                self.last_timestamp = getattr(self, "last_timestamp", 0)
-                now = time.time()
-                dt = 0.02  # 50Hz assumed
-                with open(self.file_path, "a", newline="") as f:
-                    writer = csv.writer(f)
-                    for i, line in enumerate(lines):
-                        parts = line.strip().split(",")
-                        if len(parts) == 6:
-                            t = now - dt * (len(lines) - 1 - i)
-                            t = max(t, self.last_timestamp + dt)  # enforce strict monotonicity
-                            self.last_timestamp = t
-                            writer.writerow([t] + parts)
+                try:
+                    samples = decode_batched_floats(data, samples_per_batch=6)
+                    now = time.time()
+                    dt = 0.02
+                    with open(self.file_path, "a", newline="") as f:
+                        writer = csv.writer(f)
+                        for i, sample in enumerate(samples):
+                            t = now - dt * (len(samples) - 1 - i)
+                            writer.writerow([t] + list(sample))
+                except Exception as e:
+                    print(f"[{self.device_address}] Decode error: {e}")
 
             await client.start_notify(self.device_char_UUID, notification_handler)
-            while not exit_event.is_set():
-                await asyncio.sleep(0.1)  # Adjust listening duration as needed
-            await client.stop_notify(self.device_char_UUID)
-            print(f"Stopped notifications for {self.device_address}")
+            print(f"[{self.device_address}] Subscribed to {self.device_char_UUID}")
+
+            try:
+                while not exit_event.is_set():
+                    await asyncio.sleep(0.1)
+            finally:
+                await client.stop_notify(self.device_char_UUID)
+                print(f"Stopped notifications for {self.device_address}")
+
 
 
 
@@ -168,7 +176,20 @@ async def main():
         await asyncio.sleep(3600)
 
 
-# Run the script
-asyncio.run(main())
+
+
+
+
+
+
+
+# Cleanly run asyncio
+try:
+    asyncio.run(main())
+except Exception as e:
+    print(f"Fatal error: {e}")
+finally:
+    print("Script finished cleanly")
+
 
 

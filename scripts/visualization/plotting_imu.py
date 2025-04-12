@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Directory where IMU CSV files are stored
-DATA_DIR = "dataset/imu_data"
+DATA_DIR = "dataset/imu_data/trial_1"
 
 def plot_imu_data(file_path):
     """

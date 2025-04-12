@@ -1,0 +1,109 @@
+======================================================================
+Training started: 2025-04-05 14:53:28
+Device: CPU
+Hyperparameters:
+  Hidden Size   = 128
+  Num Layers    = 2
+  Batch Size    = 32
+  Epochs        = 20
+  Learning Rate = 0.001
+  Window Size   = 50
+======================================================================
+
+Starting training for 20 epochs...
+
+Epoch 1/20
+  Batch  100/270 - Running MSE Loss: 0.1036
+  Batch  200/270 - Running MSE Loss: 0.0845
+  Batch  270/270 - Running MSE Loss: 0.0590
+  ↳ Train → MSE: 0.0915, MAE: 0.2582, RMSE: 0.3025, R²: -0.1336
+  ↳ Val   → MSE: 0.0856, MAE: 0.2535, RMSE: 0.2926, R²: -0.0514
+----------------------------------------------------------------------
+Epoch 2/20
+  Batch  100/270 - Running MSE Loss: 0.0838
+  Batch  200/270 - Running MSE Loss: 0.0841
+  Batch  270/270 - Running MSE Loss: 0.0585
+  ↳ Train → MSE: 0.0838, MAE: 0.2503, RMSE: 0.2896, R²: -0.0383
+  ↳ Val   → MSE: 0.0859, MAE: 0.2535, RMSE: 0.2932, R²: -0.0558
+----------------------------------------------------------------------
+Epoch 3/20
+  Batch  100/270 - Running MSE Loss: 0.0829
+  Batch  200/270 - Running MSE Loss: 0.0837
+  Batch  270/270 - Running MSE Loss: 0.0587
+  ↳ Train → MSE: 0.0835, MAE: 0.2497, RMSE: 0.2889, R²: -0.0332
+  ↳ Val   → MSE: 0.0856, MAE: 0.2529, RMSE: 0.2926, R²: -0.0514
+----------------------------------------------------------------------
+Epoch 4/20
+  Batch  100/270 - Running MSE Loss: 0.0830
+  Batch  200/270 - Running MSE Loss: 0.0830
+  Batch  270/270 - Running MSE Loss: 0.0585
+  ↳ Train → MSE: 0.0831, MAE: 0.2490, RMSE: 0.2883, R²: -0.0293
+  ↳ Val   → MSE: 0.0861, MAE: 0.2534, RMSE: 0.2934, R²: -0.0577
+----------------------------------------------------------------------
+Epoch 5/20
+  Batch  100/270 - Running MSE Loss: 0.0823
+  Batch  200/270 - Running MSE Loss: 0.0831
+  Batch  270/270 - Running MSE Loss: 0.0582
+  ↳ Train → MSE: 0.0828, MAE: 0.2485, RMSE: 0.2878, R²: -0.0252
+  ↳ Val   → MSE: 0.0864, MAE: 0.2544, RMSE: 0.2939, R²: -0.0614
+----------------------------------------------------------------------
+Epoch 6/20
+  Batch  100/270 - Running MSE Loss: 0.0819
+  Batch  200/270 - Running MSE Loss: 0.0827
+  Batch  270/270 - Running MSE Loss: 0.0578
+  ↳ Train → MSE: 0.0824, MAE: 0.2478, RMSE: 0.2870, R²: -0.0201
+  ↳ Val   → MSE: 0.0863, MAE: 0.2539, RMSE: 0.2938, R²: -0.0605
+----------------------------------------------------------------------
+Epoch 7/20
+  Batch  100/270 - Running MSE Loss: 0.0814
+  Batch  200/270 - Running MSE Loss: 0.0822
+  Batch  270/270 - Running MSE Loss: 0.0578
+  ↳ Train → MSE: 0.0820, MAE: 0.2470, RMSE: 0.2864, R²: -0.0152
+  ↳ Val   → MSE: 0.0868, MAE: 0.2548, RMSE: 0.2946, R²: -0.0663
+----------------------------------------------------------------------
+Epoch 8/20
+  Batch  100/270 - Running MSE Loss: 0.0808
+  Batch  200/270 - Running MSE Loss: 0.0818
+  Batch  270/270 - Running MSE Loss: 0.0575
+  ↳ Train → MSE: 0.0815, MAE: 0.2461, RMSE: 0.2856, R²: -0.0102
+  ↳ Val   → MSE: 0.0876, MAE: 0.2554, RMSE: 0.2960, R²: -0.0765
+----------------------------------------------------------------------
+Epoch 9/20
+  Batch  100/270 - Running MSE Loss: 0.0802
+  Batch  200/270 - Running MSE Loss: 0.0816
+======================================================================
+Training started: 2025-04-05 15:05:12
+Device: CPU
+Hyperparameters:
+  Hidden Size   = 128
+  Num Layers    = 2
+  Batch Size    = 32
+  Epochs        = 20
+  Learning Rate = 0.001
+  Window Size   = 50
+======================================================================
+
+Starting training for 20 epochs...
+
+Epoch 1/20
+  Batch  100/270 - Running MSE Loss: 0.1069
+  Batch  200/270 - Running MSE Loss: 0.0844
+  Batch  270/270 - Running MSE Loss: 0.0592
+  ↳ Train → MSE: 0.0928, MAE: 0.2595, RMSE: 0.3046, R²: -0.1499
+  ↳ Val   → MSE: 0.0861, MAE: 0.2533, RMSE: 0.2935, R²: -0.0581
+----------------------------------------------------------------------
+Epoch 2/20
+  Batch  100/270 - Running MSE Loss: 0.0842
+  Batch  200/270 - Running MSE Loss: 0.0835
+  Batch  270/270 - Running MSE Loss: 0.0587
+  ↳ Train → MSE: 0.0839, MAE: 0.2503, RMSE: 0.2896, R²: -0.0382
+  ↳ Val   → MSE: 0.0862, MAE: 0.2540, RMSE: 0.2936, R²: -0.0587
+----------------------------------------------------------------------
+Epoch 3/20
+  Batch  100/270 - Running MSE Loss: 0.0834
+  Batch  200/270 - Running MSE Loss: 0.0833
+  Batch  270/270 - Running MSE Loss: 0.0586
+  ↳ Train → MSE: 0.0835, MAE: 0.2497, RMSE: 0.2889, R²: -0.0344
+  ↳ Val   → MSE: 0.0861, MAE: 0.2537, RMSE: 0.2935, R²: -0.0578
+----------------------------------------------------------------------
+Epoch 4/20
