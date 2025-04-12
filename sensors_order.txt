@@ -1,0 +1,5 @@
+3E --> "chest"
+27 --> "right leg"
+09 --> "left leg"
+1B --> "right arm"
+C2 --> "left arm"
