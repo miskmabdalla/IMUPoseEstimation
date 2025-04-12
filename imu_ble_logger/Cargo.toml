@@ -1,9 +1,0 @@
-[package]
-name = "imu_ble_logger"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-btleplug = { git = "https://github.com/deviceplug/btleplug", branch = "develop", features = ["corebluetooth"], default-features = false }
-tokio = { version = "1", features = ["full"] }
-uuid = "1.3"

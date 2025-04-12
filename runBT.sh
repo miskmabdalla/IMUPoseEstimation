@@ -1,1 +1,0 @@
-python scripts/bluetooth_two_devices.py --by-address 76:22:D6:2E:C8:55 29b10001-e8f2-537e-4f6c-d104768a1214 D4:DC:D2:7A:A8:3B 19b10001-e8f2-537e-4f6c-d104768a1214

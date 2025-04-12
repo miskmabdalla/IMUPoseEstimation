@@ -38,7 +38,7 @@ def run_sports2d_batch():
         return
 
     for video_filename in video_files:
-        video_path = os.path.join(VIDEO_DIR, video_filename)
+        video_path = video_filename
         basename = os.path.splitext(video_filename)[0]
 
         if SKIP_ALREADY_PROCESSED and is_already_processed(video_path):
