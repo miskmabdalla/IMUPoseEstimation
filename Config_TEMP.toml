@@ -1,5 +1,5 @@
 [project]
-video_input = "trial_4.mp4"
+video_input = "trial_9.mp4"
 px_to_m_from_person_id = 2
 px_to_m_person_height = 1.65
 visible_side = [ "front", "none", "auto",]
