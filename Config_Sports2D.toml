@@ -19,7 +19,7 @@ video_input = 'demo.mp4'   # 'webcam' or '<video_path.ext>', or ['video1_path.mp
 nb_persons_to_detect = 1   # int or 'all' # Limiting or not the number of persons to be analyzed
 person_ordering_method = 'highest_likelihood' # 'on_click', 'highest_likelihood', 'largest_size', 'smallest_size',  'greatest_displacement', 'least_displacement', 'first_detected', or 'last_detected'
 first_person_height = 1.65  # Height of the reference person in meters (for pixels -> meters conversion: not used if a calibration file is provided)
-visible_side = ['front']  # Choose visible side among ['right', 'left', 'front', 'back', 'auto', 'none']. String or list of strings.
+visible_side = ['none']  # Choose visible side among ['right', 'left', 'front', 'back', 'auto', 'none']. String or list of strings.
                   # if 'auto', will be either 'left', 'right', or 'front' depending on the direction of the motion
                   # if 'none', coordinates will be left in 2D rather than 3D
 
@@ -38,7 +38,7 @@ input_size = [1280, 720] # [W, H]. Lower resolution will be faster but less prec
 show_realtime_results = false
 save_vid = true
 save_img = false
-save_pose = true
+save_pose = false
 calculate_angles = true
 save_angles = true
 result_dir = 'Sports2D_results' # If empty, project dir is current dir
@@ -86,8 +86,8 @@ mode = 'balanced' # 'lightweight', 'balanced', 'performance', or """{dictionary}
 
 det_frequency = 4       # Run person detection only every N frames, and inbetween track previously detected bounding boxes (keypoint detection is still run on all frames). 
                         # Equal to or greater than 1, can be as high as you want in simple uncrowded cases. Much faster, but might be less accurate. 
-device = 'CUDA' # 'auto', 'CPU', 'CUDA', 'MPS', 'ROCM'
-backend = 'onnxruntime' # 'auto', 'openvino', 'onnxruntime', 'opencv'
+device = 'auto' # 'auto', 'CPU', 'CUDA', 'MPS', 'ROCM'
+backend = 'auto' # 'auto', 'openvino', 'onnxruntime', 'opencv'
 tracking_mode = 'sports2d' # 'sports2d' or 'deepsort'. 'deepsort' is slower, harder to parametrize but can be more robust if correctly tuned
 # deepsort_params = """{'max_age':30, 'n_init':3, 'max_cosine_distance':0.3, 'max_iou_distance':0.8, 'embedder_gpu': True, embedder':'torchreid'}""" # """{dictionary between 3 double quotes}"""
                   # More robust in crowded scenes but tricky to parametrize. More information there: https://github.com/levan92/deep_sort_realtime/blob/master/deep_sort_realtime/deepsort_tracker.py#L51
@@ -125,7 +125,7 @@ joint_angles = ['Right ankle', 'Left ankle', 'Right knee', 'Left knee', 'Right h
 segment_angles = ['Right foot', 'Left foot', 'Right shank', 'Left shank', 'Right thigh', 'Left thigh', 'Pelvis', 'Trunk', 'Shoulders', 'Head', 'Right arm', 'Left arm', 'Right forearm', 'Left forearm']
 
 # Processing parameters
-flip_left_right = true  # Same angles whether the participant faces left/right. Set it to false if you want timeseries to be continuous even when the participent switches their stance.
+flip_left_right = false  # Same angles whether the participant faces left/right. Set it to false if you want timeseries to be continuous even when the participent switches their stance.
 correct_segment_angles_with_floor_angle = true # If the camera is tilted, corrects segment angles as regards to the floor angle. Set to false is the floor is tilted instead
 
 
@@ -135,7 +135,7 @@ interp_gap_smaller_than = 10        # do not interpolate bigger gaps
 fill_large_gaps_with = 'last_value' # 'last_value', 'nan', or 'zeros' 
 
 filter = true
-show_graphs = false            # Show plots of raw and processed results
+show_graphs = true            # Show plots of raw and processed results
 filter_type = 'butterworth'   # butterworth, gaussian, LOESS, median
    [post-processing.butterworth]
    order = 4 

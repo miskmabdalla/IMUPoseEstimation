@@ -1,22 +1,20 @@
-[project]
-video_input = "trial_9.mp4"
-px_to_m_from_person_id = 2
-px_to_m_person_height = 1.65
-visible_side = [ "front", "none", "auto",]
+[base]
+video_input = "trial_2.mp4"
+nb_persons_to_detect = 1
+person_ordering_method = "highest_likelihood"
+first_person_height = 1.65
+visible_side = [ "none",]
 load_trc_px = ""
 compare = false
 time_range = []
 video_dir = "videos_data/50_fps"
 webcam_id = 0
 input_size = [ 1280, 720,]
-
-[process]
-multiperson = false
 show_realtime_results = false
-save_vid = true
+save_vid = false
 save_img = false
-save_pose = true
-calculate_angles = true
+save_pose = false
+calculate_angles = false
 save_angles = true
 result_dir = "Sports2D_results"
 
@@ -33,7 +31,7 @@ average_likelihood_threshold = 0.5
 keypoint_number_threshold = 0.3
 
 [px_to_meters_conversion]
-to_meters = true
+to_meters = false
 make_c3d = false
 save_calib = true
 floor_angle = "auto"
@@ -42,10 +40,10 @@ calib_file = ""
 
 [angles]
 display_angle_values_on = [ "body", "list",]
-fontSize = 0.3
+fontSize = 0.5
 joint_angles = [ "Right ankle", "Left ankle", "Right knee", "Left knee", "Right hip", "Left hip", "Right shoulder", "Left shoulder", "Right elbow", "Left elbow", "Right wrist", "Left wrist",]
 segment_angles = [ "Right foot", "Left foot", "Right shank", "Left shank", "Right thigh", "Left thigh", "Pelvis", "Trunk", "Shoulders", "Head", "Right arm", "Left arm", "Right forearm", "Left forearm",]
-flip_left_right = true
+flip_left_right = false
 correct_segment_angles_with_floor_angle = true
 
 [post-processing]
@@ -60,7 +58,7 @@ filter_type = "butterworth"
 do_ik = false
 use_augmentation = false
 use_contacts_muscles = false
-participant_mass = [ 67.0, 55.0,]
+participant_mass = [ 55.0, 67.0,]
 right_left_symmetry = true
 default_height = 1.7
 fastest_frames_to_remove_percent = 0.1

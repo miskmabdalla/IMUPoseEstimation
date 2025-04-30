@@ -1,0 +1,20 @@
+
+Starting training for 50 epochs...
+
+  Batch  100/784 – Scaled MSE Loss: 1931.5770
+  Batch  200/784 – Scaled MSE Loss: 1777.3632
+  Batch  300/784 – Scaled MSE Loss: 1595.6776
+  Batch  400/784 – Scaled MSE Loss: 1356.4973
+  Batch  500/784 – Scaled MSE Loss: 1607.5155
+  Batch  600/784 – Scaled MSE Loss: 1304.1344
+  Batch  700/784 – Scaled MSE Loss: 1211.2542
+  Batch  784/784 – Scaled MSE Loss: 1070.0638
+Epoch 1/50
+  ↳ Train (deg) → MSE: 1611.08, MAE: 26.53, RMSE: 40.14°, R²: 0.3767
+  ↳ Val   (deg) → MSE: 1161.78, MAE: 21.44, RMSE: 34.08°, R²: 0.5514
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 1088.7036
+  Batch  200/784 – Scaled MSE Loss: 849.5134
+  Batch  300/784 – Scaled MSE Loss: 725.6694
+  Batch  400/784 – Scaled MSE Loss: 738.4164
+  Batch  500/784 – Scaled MSE Loss: 634.2759

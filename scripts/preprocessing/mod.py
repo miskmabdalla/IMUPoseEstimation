@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from pathlib import Path
 
 # Root folder containing all trial folders
@@ -20,9 +19,9 @@ for trial_dir in sorted(aligned_data_root.glob("trial_*")):
     # Drop time column if it exists
     y_df = y_df.drop(columns=["time"], errors="ignore")
 
-    # ─── wrap every angle column into the interval [-180°, +180°] ──
+    # ─── wrap every angle column into the interval [0, +180°] ──
     # (Assumes all remaining columns are joint‐angle columns in degrees.)
-    y_df.loc[:, :] = ((y_df + 180) % 360) - 180
+    y_df.loc[:, :] = abs(((y_df + 180) % 360) - 180)
     # ───────────────────────────────────────────────────────────────
 
     # Save back to the same file (overwriting)

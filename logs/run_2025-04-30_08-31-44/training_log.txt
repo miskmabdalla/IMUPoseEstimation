@@ -1,0 +1,620 @@
+
+Starting training for 50 epochs...
+
+  Batch  100/784 – Scaled MSE Loss: 2227.3210
+  Batch  200/784 – Scaled MSE Loss: 2041.5045
+  Batch  300/784 – Scaled MSE Loss: 2004.2396
+  Batch  400/784 – Scaled MSE Loss: 2122.5127
+  Batch  500/784 – Scaled MSE Loss: 2060.7615
+  Batch  600/784 – Scaled MSE Loss: 2064.5366
+  Batch  700/784 – Scaled MSE Loss: 2142.8625
+  Batch  784/784 – Scaled MSE Loss: 2048.0547
+Epoch 1/50
+  ↳ Train (deg) → MSE: 2307.49, MAE: 33.34, RMSE: 48.04°, R²: 0.1073
+  ↳ Val   (deg) → MSE: 2084.73, MAE: 31.55, RMSE: 45.66°, R²: 0.1950
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 2054.6499
+  Batch  200/784 – Scaled MSE Loss: 2026.0887
+  Batch  300/784 – Scaled MSE Loss: 2045.9186
+  Batch  400/784 – Scaled MSE Loss: 2134.5237
+  Batch  500/784 – Scaled MSE Loss: 2054.7532
+  Batch  600/784 – Scaled MSE Loss: 2183.7158
+  Batch  700/784 – Scaled MSE Loss: 2017.5878
+  Batch  784/784 – Scaled MSE Loss: 2107.4548
+Epoch 2/50
+  ↳ Train (deg) → MSE: 2077.61, MAE: 31.55, RMSE: 45.58°, R²: 0.1962
+  ↳ Val   (deg) → MSE: 2082.98, MAE: 31.35, RMSE: 45.64°, R²: 0.1957
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 2080.1357
+  Batch  200/784 – Scaled MSE Loss: 2071.7588
+  Batch  300/784 – Scaled MSE Loss: 2053.6533
+  Batch  400/784 – Scaled MSE Loss: 2060.4319
+  Batch  500/784 – Scaled MSE Loss: 1973.5142
+  Batch  600/784 – Scaled MSE Loss: 2085.7405
+  Batch  700/784 – Scaled MSE Loss: 2059.5137
+  Batch  784/784 – Scaled MSE Loss: 2069.7629
+Epoch 3/50
+  ↳ Train (deg) → MSE: 2077.69, MAE: 31.56, RMSE: 45.58°, R²: 0.1962
+  ↳ Val   (deg) → MSE: 2083.42, MAE: 31.68, RMSE: 45.64°, R²: 0.1956
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 2207.6001
+  Batch  200/784 – Scaled MSE Loss: 1988.6401
+  Batch  300/784 – Scaled MSE Loss: 2184.2659
+  Batch  400/784 – Scaled MSE Loss: 1955.0908
+  Batch  500/784 – Scaled MSE Loss: 2149.2300
+  Batch  600/784 – Scaled MSE Loss: 2012.3497
+  Batch  700/784 – Scaled MSE Loss: 2118.4358
+  Batch  784/784 – Scaled MSE Loss: 2121.3828
+Epoch 4/50
+  ↳ Train (deg) → MSE: 2077.91, MAE: 31.56, RMSE: 45.58°, R²: 0.1961
+  ↳ Val   (deg) → MSE: 2084.41, MAE: 31.49, RMSE: 45.66°, R²: 0.1952
+----------------------------------------------------------------------
+  ↳ No improvement for 2 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 2091.6042
+  Batch  200/784 – Scaled MSE Loss: 2102.3601
+  Batch  300/784 – Scaled MSE Loss: 2134.7859
+  Batch  400/784 – Scaled MSE Loss: 2093.7253
+  Batch  500/784 – Scaled MSE Loss: 2123.9888
+  Batch  600/784 – Scaled MSE Loss: 2180.2871
+  Batch  700/784 – Scaled MSE Loss: 2076.6777
+  Batch  784/784 – Scaled MSE Loss: 2172.7219
+Epoch 5/50
+  ↳ Train (deg) → MSE: 2077.65, MAE: 31.56, RMSE: 45.58°, R²: 0.1962
+  ↳ Val   (deg) → MSE: 2091.24, MAE: 31.86, RMSE: 45.73°, R²: 0.1925
+----------------------------------------------------------------------
+  ↳ No improvement for 3 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 2073.3350
+  Batch  200/784 – Scaled MSE Loss: 2041.1659
+  Batch  300/784 – Scaled MSE Loss: 2125.6997
+  Batch  400/784 – Scaled MSE Loss: 1959.2209
+  Batch  500/784 – Scaled MSE Loss: 2067.0217
+  Batch  600/784 – Scaled MSE Loss: 2110.9856
+  Batch  700/784 – Scaled MSE Loss: 2117.6904
+  Batch  784/784 – Scaled MSE Loss: 1972.9911
+Epoch 6/50
+  ↳ Train (deg) → MSE: 2069.02, MAE: 31.63, RMSE: 45.49°, R²: 0.1995
+  ↳ Val   (deg) → MSE: 2020.63, MAE: 31.73, RMSE: 44.95°, R²: 0.2198
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 1959.0933
+  Batch  200/784 – Scaled MSE Loss: 1980.3468
+  Batch  300/784 – Scaled MSE Loss: 1793.7946
+  Batch  400/784 – Scaled MSE Loss: 1798.2019
+  Batch  500/784 – Scaled MSE Loss: 1944.6222
+  Batch  600/784 – Scaled MSE Loss: 1629.6473
+  Batch  700/784 – Scaled MSE Loss: 1703.3093
+  Batch  784/784 – Scaled MSE Loss: 1516.1049
+Epoch 7/50
+  ↳ Train (deg) → MSE: 1830.56, MAE: 29.04, RMSE: 42.79°, R²: 0.2918
+  ↳ Val   (deg) → MSE: 1686.65, MAE: 27.07, RMSE: 41.07°, R²: 0.3488
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 1662.7760
+  Batch  200/784 – Scaled MSE Loss: 1642.6382
+  Batch  300/784 – Scaled MSE Loss: 1694.3435
+  Batch  400/784 – Scaled MSE Loss: 1696.9657
+  Batch  500/784 – Scaled MSE Loss: 1415.0688
+  Batch  600/784 – Scaled MSE Loss: 1588.2870
+  Batch  700/784 – Scaled MSE Loss: 1477.6986
+  Batch  784/784 – Scaled MSE Loss: 1483.4664
+Epoch 8/50
+  ↳ Train (deg) → MSE: 1595.46, MAE: 26.47, RMSE: 39.94°, R²: 0.3827
+  ↳ Val   (deg) → MSE: 1518.05, MAE: 25.79, RMSE: 38.96°, R²: 0.4139
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 1434.5389
+  Batch  200/784 – Scaled MSE Loss: 1368.0737
+  Batch  300/784 – Scaled MSE Loss: 1417.0896
+  Batch  400/784 – Scaled MSE Loss: 1508.9187
+  Batch  500/784 – Scaled MSE Loss: 1303.0530
+  Batch  600/784 – Scaled MSE Loss: 1241.9103
+  Batch  700/784 – Scaled MSE Loss: 1359.0509
+  Batch  784/784 – Scaled MSE Loss: 1258.3153
+Epoch 9/50
+  ↳ Train (deg) → MSE: 1406.61, MAE: 24.62, RMSE: 37.50°, R²: 0.4558
+  ↳ Val   (deg) → MSE: 1251.69, MAE: 23.06, RMSE: 35.38°, R²: 0.5167
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 1347.0841
+  Batch  200/784 – Scaled MSE Loss: 1316.9772
+  Batch  300/784 – Scaled MSE Loss: 1438.9174
+  Batch  400/784 – Scaled MSE Loss: 1279.0364
+  Batch  500/784 – Scaled MSE Loss: 1094.5940
+  Batch  600/784 – Scaled MSE Loss: 1108.9093
+  Batch  700/784 – Scaled MSE Loss: 963.0046
+  Batch  784/784 – Scaled MSE Loss: 841.5341
+Epoch 10/50
+  ↳ Train (deg) → MSE: 1137.54, MAE: 21.50, RMSE: 33.73°, R²: 0.5599
+  ↳ Val   (deg) → MSE: 980.93, MAE: 19.71, RMSE: 31.32°, R²: 0.6212
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 940.7236
+  Batch  200/784 – Scaled MSE Loss: 781.6456
+  Batch  300/784 – Scaled MSE Loss: 871.6426
+  Batch  400/784 – Scaled MSE Loss: 813.7576
+  Batch  500/784 – Scaled MSE Loss: 835.8766
+  Batch  600/784 – Scaled MSE Loss: 886.7318
+  Batch  700/784 – Scaled MSE Loss: 784.9927
+  Batch  784/784 – Scaled MSE Loss: 682.4736
+Epoch 11/50
+  ↳ Train (deg) → MSE: 848.60, MAE: 18.44, RMSE: 29.13°, R²: 0.6717
+  ↳ Val   (deg) → MSE: 763.48, MAE: 17.46, RMSE: 27.63°, R²: 0.7052
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 802.9115
+  Batch  200/784 – Scaled MSE Loss: 665.5516
+  Batch  300/784 – Scaled MSE Loss: 781.4505
+  Batch  400/784 – Scaled MSE Loss: 777.9713
+  Batch  500/784 – Scaled MSE Loss: 638.1912
+  Batch  600/784 – Scaled MSE Loss: 687.4826
+  Batch  700/784 – Scaled MSE Loss: 724.5821
+  Batch  784/784 – Scaled MSE Loss: 754.3909
+Epoch 12/50
+  ↳ Train (deg) → MSE: 736.63, MAE: 17.13, RMSE: 27.14°, R²: 0.7150
+  ↳ Val   (deg) → MSE: 709.33, MAE: 16.85, RMSE: 26.63°, R²: 0.7261
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 760.5342
+  Batch  200/784 – Scaled MSE Loss: 663.0715
+  Batch  300/784 – Scaled MSE Loss: 700.0674
+  Batch  400/784 – Scaled MSE Loss: 523.8636
+  Batch  500/784 – Scaled MSE Loss: 621.3630
+  Batch  600/784 – Scaled MSE Loss: 583.6366
+  Batch  700/784 – Scaled MSE Loss: 581.2358
+  Batch  784/784 – Scaled MSE Loss: 579.4881
+Epoch 13/50
+  ↳ Train (deg) → MSE: 639.50, MAE: 15.90, RMSE: 25.29°, R²: 0.7526
+  ↳ Val   (deg) → MSE: 543.43, MAE: 14.65, RMSE: 23.31°, R²: 0.7902
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 630.4662
+  Batch  200/784 – Scaled MSE Loss: 473.2460
+  Batch  300/784 – Scaled MSE Loss: 554.7618
+  Batch  400/784 – Scaled MSE Loss: 547.7777
+  Batch  500/784 – Scaled MSE Loss: 510.9536
+  Batch  600/784 – Scaled MSE Loss: 511.3441
+  Batch  700/784 – Scaled MSE Loss: 569.9879
+  Batch  784/784 – Scaled MSE Loss: 451.1343
+Epoch 14/50
+  ↳ Train (deg) → MSE: 537.32, MAE: 14.44, RMSE: 23.18°, R²: 0.7921
+  ↳ Val   (deg) → MSE: 510.30, MAE: 13.93, RMSE: 22.59°, R²: 0.8030
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 485.8778
+  Batch  200/784 – Scaled MSE Loss: 496.4075
+  Batch  300/784 – Scaled MSE Loss: 509.9418
+  Batch  400/784 – Scaled MSE Loss: 518.9493
+  Batch  500/784 – Scaled MSE Loss: 522.3587
+  Batch  600/784 – Scaled MSE Loss: 533.2750
+  Batch  700/784 – Scaled MSE Loss: 488.4923
+  Batch  784/784 – Scaled MSE Loss: 461.0381
+Epoch 15/50
+  ↳ Train (deg) → MSE: 497.97, MAE: 13.73, RMSE: 22.32°, R²: 0.8073
+  ↳ Val   (deg) → MSE: 458.13, MAE: 13.10, RMSE: 21.40°, R²: 0.8231
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 485.2833
+  Batch  200/784 – Scaled MSE Loss: 395.8593
+  Batch  300/784 – Scaled MSE Loss: 361.7754
+  Batch  400/784 – Scaled MSE Loss: 388.7955
+  Batch  500/784 – Scaled MSE Loss: 343.8810
+  Batch  600/784 – Scaled MSE Loss: 431.1543
+  Batch  700/784 – Scaled MSE Loss: 411.9275
+  Batch  784/784 – Scaled MSE Loss: 478.9753
+Epoch 16/50
+  ↳ Train (deg) → MSE: 414.26, MAE: 12.44, RMSE: 20.35°, R²: 0.8397
+  ↳ Val   (deg) → MSE: 395.78, MAE: 12.03, RMSE: 19.89°, R²: 0.8472
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 415.3688
+  Batch  200/784 – Scaled MSE Loss: 346.7548
+  Batch  300/784 – Scaled MSE Loss: 301.7422
+  Batch  400/784 – Scaled MSE Loss: 337.6618
+  Batch  500/784 – Scaled MSE Loss: 352.9315
+  Batch  600/784 – Scaled MSE Loss: 388.7882
+  Batch  700/784 – Scaled MSE Loss: 313.4107
+  Batch  784/784 – Scaled MSE Loss: 295.9123
+Epoch 17/50
+  ↳ Train (deg) → MSE: 359.06, MAE: 11.46, RMSE: 18.95°, R²: 0.8611
+  ↳ Val   (deg) → MSE: 345.98, MAE: 11.19, RMSE: 18.60°, R²: 0.8664
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 382.8953
+  Batch  200/784 – Scaled MSE Loss: 316.4445
+  Batch  300/784 – Scaled MSE Loss: 399.5151
+  Batch  400/784 – Scaled MSE Loss: 388.7331
+  Batch  500/784 – Scaled MSE Loss: 302.1662
+  Batch  600/784 – Scaled MSE Loss: 319.3940
+  Batch  700/784 – Scaled MSE Loss: 296.8615
+  Batch  784/784 – Scaled MSE Loss: 259.9926
+Epoch 18/50
+  ↳ Train (deg) → MSE: 321.50, MAE: 10.80, RMSE: 17.93°, R²: 0.8756
+  ↳ Val   (deg) → MSE: 296.13, MAE: 10.31, RMSE: 17.21°, R²: 0.8857
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 290.4562
+  Batch  200/784 – Scaled MSE Loss: 322.3172
+  Batch  300/784 – Scaled MSE Loss: 259.9598
+  Batch  400/784 – Scaled MSE Loss: 356.9303
+  Batch  500/784 – Scaled MSE Loss: 295.0328
+  Batch  600/784 – Scaled MSE Loss: 295.8953
+  Batch  700/784 – Scaled MSE Loss: 231.8869
+  Batch  784/784 – Scaled MSE Loss: 261.1178
+Epoch 19/50
+  ↳ Train (deg) → MSE: 289.11, MAE: 10.21, RMSE: 17.00°, R²: 0.8881
+  ↳ Val   (deg) → MSE: 265.00, MAE: 9.71, RMSE: 16.28°, R²: 0.8977
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 208.8815
+  Batch  200/784 – Scaled MSE Loss: 220.3506
+  Batch  300/784 – Scaled MSE Loss: 282.5589
+  Batch  400/784 – Scaled MSE Loss: 239.8723
+  Batch  500/784 – Scaled MSE Loss: 304.9926
+  Batch  600/784 – Scaled MSE Loss: 285.8798
+  Batch  700/784 – Scaled MSE Loss: 310.5251
+  Batch  784/784 – Scaled MSE Loss: 380.8327
+Epoch 20/50
+  ↳ Train (deg) → MSE: 276.21, MAE: 9.84, RMSE: 16.62°, R²: 0.8931
+  ↳ Val   (deg) → MSE: 298.87, MAE: 10.14, RMSE: 17.29°, R²: 0.8846
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 218.0653
+  Batch  200/784 – Scaled MSE Loss: 271.6922
+  Batch  300/784 – Scaled MSE Loss: 219.1376
+  Batch  400/784 – Scaled MSE Loss: 233.7198
+  Batch  500/784 – Scaled MSE Loss: 321.3687
+  Batch  600/784 – Scaled MSE Loss: 166.1350
+  Batch  700/784 – Scaled MSE Loss: 253.5795
+  Batch  784/784 – Scaled MSE Loss: 251.8996
+Epoch 21/50
+  ↳ Train (deg) → MSE: 240.95, MAE: 9.21, RMSE: 15.52°, R²: 0.9068
+  ↳ Val   (deg) → MSE: 226.57, MAE: 8.92, RMSE: 15.05°, R²: 0.9125
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 193.1169
+  Batch  200/784 – Scaled MSE Loss: 260.5814
+  Batch  300/784 – Scaled MSE Loss: 298.7178
+  Batch  400/784 – Scaled MSE Loss: 275.8031
+  Batch  500/784 – Scaled MSE Loss: 266.6658
+  Batch  600/784 – Scaled MSE Loss: 152.0703
+  Batch  700/784 – Scaled MSE Loss: 214.6164
+  Batch  784/784 – Scaled MSE Loss: 242.8203
+Epoch 22/50
+  ↳ Train (deg) → MSE: 212.83, MAE: 8.69, RMSE: 14.59°, R²: 0.9177
+  ↳ Val   (deg) → MSE: 245.47, MAE: 9.31, RMSE: 15.67°, R²: 0.9052
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 164.3620
+  Batch  200/784 – Scaled MSE Loss: 175.8891
+  Batch  300/784 – Scaled MSE Loss: 194.6527
+  Batch  400/784 – Scaled MSE Loss: 177.2824
+  Batch  500/784 – Scaled MSE Loss: 321.7131
+  Batch  600/784 – Scaled MSE Loss: 169.7581
+  Batch  700/784 – Scaled MSE Loss: 198.8358
+  Batch  784/784 – Scaled MSE Loss: 150.5068
+Epoch 23/50
+  ↳ Train (deg) → MSE: 206.36, MAE: 8.52, RMSE: 14.37°, R²: 0.9202
+  ↳ Val   (deg) → MSE: 183.08, MAE: 8.07, RMSE: 13.53°, R²: 0.9293
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 152.2471
+  Batch  200/784 – Scaled MSE Loss: 168.1252
+  Batch  300/784 – Scaled MSE Loss: 178.3210
+  Batch  400/784 – Scaled MSE Loss: 160.0895
+  Batch  500/784 – Scaled MSE Loss: 228.3338
+  Batch  600/784 – Scaled MSE Loss: 169.9284
+  Batch  700/784 – Scaled MSE Loss: 127.8857
+  Batch  784/784 – Scaled MSE Loss: 135.0482
+Epoch 24/50
+  ↳ Train (deg) → MSE: 166.89, MAE: 7.73, RMSE: 12.92°, R²: 0.9354
+  ↳ Val   (deg) → MSE: 161.78, MAE: 7.58, RMSE: 12.72°, R²: 0.9375
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 131.9158
+  Batch  200/784 – Scaled MSE Loss: 157.2878
+  Batch  300/784 – Scaled MSE Loss: 186.3794
+  Batch  400/784 – Scaled MSE Loss: 174.1760
+  Batch  500/784 – Scaled MSE Loss: 163.2617
+  Batch  600/784 – Scaled MSE Loss: 146.0620
+  Batch  700/784 – Scaled MSE Loss: 176.5312
+  Batch  784/784 – Scaled MSE Loss: 169.5459
+Epoch 25/50
+  ↳ Train (deg) → MSE: 164.38, MAE: 7.62, RMSE: 12.82°, R²: 0.9364
+  ↳ Val   (deg) → MSE: 194.67, MAE: 8.08, RMSE: 13.95°, R²: 0.9248
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 226.8992
+  Batch  200/784 – Scaled MSE Loss: 162.3139
+  Batch  300/784 – Scaled MSE Loss: 254.2408
+  Batch  400/784 – Scaled MSE Loss: 245.3992
+  Batch  500/784 – Scaled MSE Loss: 169.3235
+  Batch  600/784 – Scaled MSE Loss: 172.3779
+  Batch  700/784 – Scaled MSE Loss: 174.4520
+  Batch  784/784 – Scaled MSE Loss: 154.5142
+Epoch 26/50
+  ↳ Train (deg) → MSE: 183.01, MAE: 7.91, RMSE: 13.53°, R²: 0.9292
+  ↳ Val   (deg) → MSE: 155.46, MAE: 7.38, RMSE: 12.47°, R²: 0.9400
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 138.1670
+  Batch  200/784 – Scaled MSE Loss: 165.1666
+  Batch  300/784 – Scaled MSE Loss: 130.5006
+  Batch  400/784 – Scaled MSE Loss: 110.5509
+  Batch  500/784 – Scaled MSE Loss: 102.5825
+  Batch  600/784 – Scaled MSE Loss: 118.8593
+  Batch  700/784 – Scaled MSE Loss: 113.2424
+  Batch  784/784 – Scaled MSE Loss: 114.4137
+Epoch 27/50
+  ↳ Train (deg) → MSE: 133.31, MAE: 6.96, RMSE: 11.55°, R²: 0.9484
+  ↳ Val   (deg) → MSE: 128.78, MAE: 6.80, RMSE: 11.35°, R²: 0.9503
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 99.1948
+  Batch  200/784 – Scaled MSE Loss: 95.9993
+  Batch  300/784 – Scaled MSE Loss: 123.7838
+  Batch  400/784 – Scaled MSE Loss: 111.7684
+  Batch  500/784 – Scaled MSE Loss: 116.5325
+  Batch  600/784 – Scaled MSE Loss: 239.7281
+  Batch  700/784 – Scaled MSE Loss: 182.6452
+  Batch  784/784 – Scaled MSE Loss: 122.4868
+Epoch 28/50
+  ↳ Train (deg) → MSE: 130.51, MAE: 6.81, RMSE: 11.42°, R²: 0.9495
+  ↳ Val   (deg) → MSE: 137.72, MAE: 6.88, RMSE: 11.74°, R²: 0.9468
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 98.6957
+  Batch  200/784 – Scaled MSE Loss: 110.2580
+  Batch  300/784 – Scaled MSE Loss: 115.6183
+  Batch  400/784 – Scaled MSE Loss: 142.7722
+  Batch  500/784 – Scaled MSE Loss: 120.0239
+  Batch  600/784 – Scaled MSE Loss: 100.2261
+  Batch  700/784 – Scaled MSE Loss: 122.3940
+  Batch  784/784 – Scaled MSE Loss: 142.5338
+Epoch 29/50
+  ↳ Train (deg) → MSE: 118.48, MAE: 6.56, RMSE: 10.88°, R²: 0.9542
+  ↳ Val   (deg) → MSE: 131.47, MAE: 6.79, RMSE: 11.47°, R²: 0.9492
+----------------------------------------------------------------------
+  ↳ No improvement for 2 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 98.7688
+  Batch  200/784 – Scaled MSE Loss: 87.4229
+  Batch  300/784 – Scaled MSE Loss: 95.3949
+  Batch  400/784 – Scaled MSE Loss: 87.7455
+  Batch  500/784 – Scaled MSE Loss: 89.6849
+  Batch  600/784 – Scaled MSE Loss: 74.0941
+  Batch  700/784 – Scaled MSE Loss: 86.2159
+  Batch  784/784 – Scaled MSE Loss: 124.7857
+Epoch 30/50
+  ↳ Train (deg) → MSE: 100.53, MAE: 6.14, RMSE: 10.03°, R²: 0.9611
+  ↳ Val   (deg) → MSE: 100.94, MAE: 6.09, RMSE: 10.05°, R²: 0.9610
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 81.7629
+  Batch  200/784 – Scaled MSE Loss: 83.8237
+  Batch  300/784 – Scaled MSE Loss: 75.4359
+  Batch  400/784 – Scaled MSE Loss: 90.4736
+  Batch  500/784 – Scaled MSE Loss: 106.6746
+  Batch  600/784 – Scaled MSE Loss: 103.8971
+  Batch  700/784 – Scaled MSE Loss: 92.9156
+  Batch  784/784 – Scaled MSE Loss: 83.1581
+Epoch 31/50
+  ↳ Train (deg) → MSE: 96.03, MAE: 6.00, RMSE: 9.80°, R²: 0.9628
+  ↳ Val   (deg) → MSE: 92.14, MAE: 5.84, RMSE: 9.60°, R²: 0.9644
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 105.4275
+  Batch  200/784 – Scaled MSE Loss: 75.8843
+  Batch  300/784 – Scaled MSE Loss: 84.1120
+  Batch  400/784 – Scaled MSE Loss: 105.3114
+  Batch  500/784 – Scaled MSE Loss: 93.8840
+  Batch  600/784 – Scaled MSE Loss: 69.1171
+  Batch  700/784 – Scaled MSE Loss: 83.0460
+  Batch  784/784 – Scaled MSE Loss: 75.9177
+Epoch 32/50
+  ↳ Train (deg) → MSE: 88.97, MAE: 5.80, RMSE: 9.43°, R²: 0.9656
+  ↳ Val   (deg) → MSE: 89.52, MAE: 5.76, RMSE: 9.46°, R²: 0.9654
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 79.3776
+  Batch  200/784 – Scaled MSE Loss: 79.5727
+  Batch  300/784 – Scaled MSE Loss: 89.6226
+  Batch  400/784 – Scaled MSE Loss: 73.9790
+  Batch  500/784 – Scaled MSE Loss: 87.4931
+  Batch  600/784 – Scaled MSE Loss: 137.6442
+  Batch  700/784 – Scaled MSE Loss: 182.1611
+  Batch  784/784 – Scaled MSE Loss: 149.9144
+Epoch 33/50
+  ↳ Train (deg) → MSE: 91.85, MAE: 5.76, RMSE: 9.58°, R²: 0.9645
+  ↳ Val   (deg) → MSE: 160.98, MAE: 7.17, RMSE: 12.69°, R²: 0.9378
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 136.9587
+  Batch  200/784 – Scaled MSE Loss: 68.8521
+  Batch  300/784 – Scaled MSE Loss: 82.2601
+  Batch  400/784 – Scaled MSE Loss: 134.1462
+  Batch  500/784 – Scaled MSE Loss: 110.5111
+  Batch  600/784 – Scaled MSE Loss: 83.2823
+  Batch  700/784 – Scaled MSE Loss: 105.0629
+  Batch  784/784 – Scaled MSE Loss: 98.2537
+Epoch 34/50
+  ↳ Train (deg) → MSE: 90.75, MAE: 5.73, RMSE: 9.53°, R²: 0.9649
+  ↳ Val   (deg) → MSE: 104.00, MAE: 5.98, RMSE: 10.20°, R²: 0.9598
+----------------------------------------------------------------------
+  ↳ No improvement for 2 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 56.5900
+  Batch  200/784 – Scaled MSE Loss: 54.4083
+  Batch  300/784 – Scaled MSE Loss: 72.5375
+  Batch  400/784 – Scaled MSE Loss: 81.0644
+  Batch  500/784 – Scaled MSE Loss: 67.5874
+  Batch  600/784 – Scaled MSE Loss: 71.1932
+  Batch  700/784 – Scaled MSE Loss: 61.6081
+  Batch  784/784 – Scaled MSE Loss: 65.2750
+Epoch 35/50
+  ↳ Train (deg) → MSE: 71.40, MAE: 5.26, RMSE: 8.45°, R²: 0.9724
+  ↳ Val   (deg) → MSE: 72.48, MAE: 5.29, RMSE: 8.51°, R²: 0.9720
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 95.9188
+  Batch  200/784 – Scaled MSE Loss: 63.9531
+  Batch  300/784 – Scaled MSE Loss: 70.9735
+  Batch  400/784 – Scaled MSE Loss: 69.7889
+  Batch  500/784 – Scaled MSE Loss: 56.2587
+  Batch  600/784 – Scaled MSE Loss: 41.3926
+  Batch  700/784 – Scaled MSE Loss: 66.0230
+  Batch  784/784 – Scaled MSE Loss: 58.6704
+Epoch 36/50
+  ↳ Train (deg) → MSE: 72.82, MAE: 5.29, RMSE: 8.53°, R²: 0.9718
+  ↳ Val   (deg) → MSE: 67.88, MAE: 5.11, RMSE: 8.24°, R²: 0.9738
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 64.1822
+  Batch  200/784 – Scaled MSE Loss: 58.7038
+  Batch  300/784 – Scaled MSE Loss: 53.3726
+  Batch  400/784 – Scaled MSE Loss: 145.4922
+  Batch  500/784 – Scaled MSE Loss: 109.6847
+  Batch  600/784 – Scaled MSE Loss: 134.1306
+  Batch  700/784 – Scaled MSE Loss: 85.1033
+  Batch  784/784 – Scaled MSE Loss: 75.0943
+Epoch 37/50
+  ↳ Train (deg) → MSE: 85.78, MAE: 5.53, RMSE: 9.26°, R²: 0.9668
+  ↳ Val   (deg) → MSE: 88.98, MAE: 5.77, RMSE: 9.43°, R²: 0.9656
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 62.3276
+  Batch  200/784 – Scaled MSE Loss: 60.3966
+  Batch  300/784 – Scaled MSE Loss: 53.9061
+  Batch  400/784 – Scaled MSE Loss: 101.4008
+  Batch  500/784 – Scaled MSE Loss: 90.2127
+  Batch  600/784 – Scaled MSE Loss: 81.9883
+  Batch  700/784 – Scaled MSE Loss: 68.4370
+  Batch  784/784 – Scaled MSE Loss: 55.3182
+Epoch 38/50
+  ↳ Train (deg) → MSE: 67.31, MAE: 5.07, RMSE: 8.20°, R²: 0.9740
+  ↳ Val   (deg) → MSE: 63.72, MAE: 4.97, RMSE: 7.98°, R²: 0.9754
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 55.5575
+  Batch  200/784 – Scaled MSE Loss: 55.2782
+  Batch  300/784 – Scaled MSE Loss: 44.7947
+  Batch  400/784 – Scaled MSE Loss: 45.6702
+  Batch  500/784 – Scaled MSE Loss: 46.6337
+  Batch  600/784 – Scaled MSE Loss: 44.8389
+  Batch  700/784 – Scaled MSE Loss: 42.1071
+  Batch  784/784 – Scaled MSE Loss: 67.2302
+Epoch 39/50
+  ↳ Train (deg) → MSE: 54.10, MAE: 4.67, RMSE: 7.36°, R²: 0.9791
+  ↳ Val   (deg) → MSE: 60.29, MAE: 4.83, RMSE: 7.76°, R²: 0.9767
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 59.1574
+  Batch  200/784 – Scaled MSE Loss: 46.4131
+  Batch  300/784 – Scaled MSE Loss: 47.9504
+  Batch  400/784 – Scaled MSE Loss: 46.1868
+  Batch  500/784 – Scaled MSE Loss: 45.1311
+  Batch  600/784 – Scaled MSE Loss: 60.4860
+  Batch  700/784 – Scaled MSE Loss: 71.6446
+  Batch  784/784 – Scaled MSE Loss: 138.6903
+Epoch 40/50
+  ↳ Train (deg) → MSE: 64.49, MAE: 4.90, RMSE: 8.03°, R²: 0.9750
+  ↳ Val   (deg) → MSE: 161.30, MAE: 6.96, RMSE: 12.70°, R²: 0.9377
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 213.2382
+  Batch  200/784 – Scaled MSE Loss: 88.3563
+  Batch  300/784 – Scaled MSE Loss: 77.8938
+  Batch  400/784 – Scaled MSE Loss: 75.7805
+  Batch  500/784 – Scaled MSE Loss: 49.2200
+  Batch  600/784 – Scaled MSE Loss: 52.6026
+  Batch  700/784 – Scaled MSE Loss: 48.6485
+  Batch  784/784 – Scaled MSE Loss: 38.8668
+Epoch 41/50
+  ↳ Train (deg) → MSE: 85.13, MAE: 5.45, RMSE: 9.23°, R²: 0.9671
+  ↳ Val   (deg) → MSE: 59.09, MAE: 4.81, RMSE: 7.69°, R²: 0.9772
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 57.5074
+  Batch  200/784 – Scaled MSE Loss: 46.1142
+  Batch  300/784 – Scaled MSE Loss: 42.4880
+  Batch  400/784 – Scaled MSE Loss: 86.3624
+  Batch  500/784 – Scaled MSE Loss: 64.8708
+  Batch  600/784 – Scaled MSE Loss: 89.4200
+  Batch  700/784 – Scaled MSE Loss: 53.7967
+  Batch  784/784 – Scaled MSE Loss: 59.0199
+Epoch 42/50
+  ↳ Train (deg) → MSE: 66.06, MAE: 4.96, RMSE: 8.13°, R²: 0.9744
+  ↳ Val   (deg) → MSE: 61.62, MAE: 4.87, RMSE: 7.85°, R²: 0.9762
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 65.9020
+  Batch  200/784 – Scaled MSE Loss: 48.5564
+  Batch  300/784 – Scaled MSE Loss: 42.1547
+  Batch  400/784 – Scaled MSE Loss: 45.7028
+  Batch  500/784 – Scaled MSE Loss: 53.5759
+  Batch  600/784 – Scaled MSE Loss: 45.7953
+  Batch  700/784 – Scaled MSE Loss: 53.4506
+  Batch  784/784 – Scaled MSE Loss: 55.9718
+Epoch 43/50
+  ↳ Train (deg) → MSE: 50.91, MAE: 4.56, RMSE: 7.13°, R²: 0.9803
+  ↳ Val   (deg) → MSE: 63.33, MAE: 4.95, RMSE: 7.96°, R²: 0.9755
+----------------------------------------------------------------------
+  ↳ No improvement for 2 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 63.2592
+  Batch  200/784 – Scaled MSE Loss: 62.3953
+  Batch  300/784 – Scaled MSE Loss: 59.6217
+  Batch  400/784 – Scaled MSE Loss: 63.8647
+  Batch  500/784 – Scaled MSE Loss: 44.3932
+  Batch  600/784 – Scaled MSE Loss: 43.9949
+  Batch  700/784 – Scaled MSE Loss: 42.2251
+  Batch  784/784 – Scaled MSE Loss: 44.5627
+Epoch 44/50
+  ↳ Train (deg) → MSE: 48.46, MAE: 4.45, RMSE: 6.96°, R²: 0.9813
+  ↳ Val   (deg) → MSE: 55.17, MAE: 4.58, RMSE: 7.43°, R²: 0.9787
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 36.0787
+  Batch  200/784 – Scaled MSE Loss: 38.3087
+  Batch  300/784 – Scaled MSE Loss: 46.5914
+  Batch  400/784 – Scaled MSE Loss: 48.7472
+  Batch  500/784 – Scaled MSE Loss: 30.7112
+  Batch  600/784 – Scaled MSE Loss: 32.9974
+  Batch  700/784 – Scaled MSE Loss: 41.7051
+  Batch  784/784 – Scaled MSE Loss: 42.7578
+Epoch 45/50
+  ↳ Train (deg) → MSE: 43.15, MAE: 4.26, RMSE: 6.57°, R²: 0.9833
+  ↳ Val   (deg) → MSE: 55.61, MAE: 4.56, RMSE: 7.46°, R²: 0.9785
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 53.0584
+  Batch  200/784 – Scaled MSE Loss: 39.1055
+  Batch  300/784 – Scaled MSE Loss: 36.1148
+  Batch  400/784 – Scaled MSE Loss: 38.4115
+  Batch  500/784 – Scaled MSE Loss: 45.1270
+  Batch  600/784 – Scaled MSE Loss: 45.0916
+  Batch  700/784 – Scaled MSE Loss: 56.0737
+  Batch  784/784 – Scaled MSE Loss: 46.6080
+Epoch 46/50
+  ↳ Train (deg) → MSE: 48.19, MAE: 4.38, RMSE: 6.94°, R²: 0.9814
+  ↳ Val   (deg) → MSE: 53.43, MAE: 4.60, RMSE: 7.31°, R²: 0.9794
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 48.4657
+  Batch  200/784 – Scaled MSE Loss: 47.6800
+  Batch  300/784 – Scaled MSE Loss: 198.6641
+  Batch  400/784 – Scaled MSE Loss: 156.0858
+  Batch  500/784 – Scaled MSE Loss: 58.6699
+  Batch  600/784 – Scaled MSE Loss: 64.1938
+  Batch  700/784 – Scaled MSE Loss: 52.7103
+  Batch  784/784 – Scaled MSE Loss: 52.0411
+Epoch 47/50
+  ↳ Train (deg) → MSE: 67.71, MAE: 4.90, RMSE: 8.23°, R²: 0.9738
+  ↳ Val   (deg) → MSE: 57.39, MAE: 4.66, RMSE: 7.58°, R²: 0.9778
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
+  Batch  100/784 – Scaled MSE Loss: 73.8341
+  Batch  200/784 – Scaled MSE Loss: 82.3533
+  Batch  300/784 – Scaled MSE Loss: 45.0161
+  Batch  400/784 – Scaled MSE Loss: 39.3622
+  Batch  500/784 – Scaled MSE Loss: 44.4870
+  Batch  600/784 – Scaled MSE Loss: 36.1083
+  Batch  700/784 – Scaled MSE Loss: 45.6959
+  Batch  784/784 – Scaled MSE Loss: 34.4574
+Epoch 48/50
+  ↳ Train (deg) → MSE: 44.00, MAE: 4.27, RMSE: 6.63°, R²: 0.9830
+  ↳ Val   (deg) → MSE: 45.79, MAE: 4.30, RMSE: 6.77°, R²: 0.9823
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 32.9348
+  Batch  200/784 – Scaled MSE Loss: 29.1907
+  Batch  300/784 – Scaled MSE Loss: 33.4660
+  Batch  400/784 – Scaled MSE Loss: 46.0008
+  Batch  500/784 – Scaled MSE Loss: 30.7534
+  Batch  600/784 – Scaled MSE Loss: 27.1514
+  Batch  700/784 – Scaled MSE Loss: 30.1418
+  Batch  784/784 – Scaled MSE Loss: 28.7023
+Epoch 49/50
+  ↳ Train (deg) → MSE: 35.84, MAE: 3.94, RMSE: 5.99°, R²: 0.9861
+  ↳ Val   (deg) → MSE: 41.88, MAE: 4.15, RMSE: 6.47°, R²: 0.9838
+----------------------------------------------------------------------
+  Batch  100/784 – Scaled MSE Loss: 30.3004
+  Batch  200/784 – Scaled MSE Loss: 25.2396
+  Batch  300/784 – Scaled MSE Loss: 23.8259
+  Batch  400/784 – Scaled MSE Loss: 33.6402
+  Batch  500/784 – Scaled MSE Loss: 77.7131
+  Batch  600/784 – Scaled MSE Loss: 62.6982
+  Batch  700/784 – Scaled MSE Loss: 62.0460
+  Batch  784/784 – Scaled MSE Loss: 66.4954
+Epoch 50/50
+  ↳ Train (deg) → MSE: 49.43, MAE: 4.34, RMSE: 7.03°, R²: 0.9809
+  ↳ Val   (deg) → MSE: 90.69, MAE: 5.58, RMSE: 9.52°, R²: 0.9650
+----------------------------------------------------------------------
+  ↳ No improvement for 1 consecutive epochs.
