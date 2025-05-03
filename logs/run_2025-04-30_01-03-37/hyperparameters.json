@@ -1,8 +1,0 @@
-{
-  "hidden_size": 256,
-  "num_layers": 3,
-  "batch_size": 70,
-  "epochs": 50,
-  "learning_rate": 0.001,
-  "window_size": 70
-}
