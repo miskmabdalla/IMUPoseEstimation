@@ -3,3 +3,10 @@ no sternum: logs/run_2025-05-04_02-05-19
 no left leg: logs/run_2025-05-04_02-13-07
 no left arm: logs/run_2025-05-04_02-17-06
 no left leg and arm: logs/run_2025-05-04_02-33-13
+
+no sternum: logs/run_2025-05-05_00-44-55
+no left leg: logs/run_2025-05-05_00-51-26
+no left arm: logs/run_2025-05-05_00-56-05
+no left leg and arm: logs/run_2025-05-05_01-03-06
+
+best model and logged: logs/run_2025-05-05_01-36-19
