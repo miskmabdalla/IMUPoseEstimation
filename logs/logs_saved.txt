@@ -1,1 +1,5 @@
 best model and weights: logs/run_2025-04-30_22-17-14
+no sternum: logs/run_2025-05-04_02-05-19
+no left leg: logs/run_2025-05-04_02-13-07
+no left arm: logs/run_2025-05-04_02-17-06
+no left leg and arm: logs/run_2025-05-04_02-33-13
