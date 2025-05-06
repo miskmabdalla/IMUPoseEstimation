@@ -10,3 +10,12 @@ no left arm: logs/run_2025-05-05_00-56-05
 no left leg and arm: logs/run_2025-05-05_01-03-06
 
 best model and logged: logs/run_2025-05-05_01-36-19
+
+highest error in left limbs: logs/run_2025-05-06_02-47-19
+
+1 layer: logs/run_2025-05-06_03-08-10
+128 hidden size: logs/run_2025-05-06_03-14-18
+50 batch size: logs/run_2025-05-06_03-16-38
+50 window size: logs/run_2025-05-06_03-21-25
+no sigmoid: logs/run_2025-05-06_03-25-24
+removed second linear: logs/run_2025-05-06_03-29-20

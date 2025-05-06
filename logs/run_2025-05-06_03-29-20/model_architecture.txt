@@ -1,0 +1,7 @@
+IMULSTMModel(
+  (lstm): LSTM(30, 256, num_layers=2, batch_first=True)
+  (fc1): Linear(in_features=256, out_features=128, bias=True)
+  (relu1): ReLU()
+  (fc3): Linear(in_features=128, out_features=24, bias=True)
+  (output_activation): Sigmoid()
+)
