@@ -49,7 +49,7 @@ def run_sports2d_batch():
 
         # Inject video path into config
         config = base_config.copy()
-        config['project']['video_input'] = video_path
+        config['base']['video_input'] = video_path
 
         # Write temporary config file
         try:
