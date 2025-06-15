@@ -1,4 +1,4 @@
-# HEADING
+# Work in Progress
 
 Pose estimation using IMUs and deep learning
 
