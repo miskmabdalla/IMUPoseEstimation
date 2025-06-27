@@ -63,7 +63,7 @@ def main() -> None:
     for trial_dir in trials:
         y_path = trial_dir / "Y.csv"
         if not y_path.exists():
-            print(f"⚠️  {y_path.relative_to(ROOT.parent)} missing, skipping.")
+            print(f" {y_path.relative_to(ROOT.parent)} missing, skipping.")
             continue
 
         print(f"Plotting {y_path.relative_to(ROOT.parent)}")

@@ -13,10 +13,10 @@ def copy_trial_files(trial_name: str):
     dst_dir = OUTPUT_ROOT / trial_name
 
     if not src_y.exists():
-        print(f"⚠️ Missing Y.csv in {src_y}")
+        print(f"Missing Y.csv in {src_y}")
         return
     if not src_x.exists():
-        print(f"⚠️ Missing X.csv in {src_x}")
+        print(f"Missing X.csv in {src_x}")
         return
 
     dst_dir.mkdir(parents=True, exist_ok=True)
@@ -24,7 +24,7 @@ def copy_trial_files(trial_name: str):
     shutil.copy2(src_y, dst_dir / "Y.csv")
     shutil.copy2(src_x, dst_dir / "X.csv")
 
-    print(f"✅ Copied X and Y for {trial_name} to {dst_dir}")
+    print(f"Copied X and Y for {trial_name} to {dst_dir}")
 
 # === Main Execution ===
 for trial_dir in sorted(WRAPPED_Y_ROOT.glob("trial_*")):
@@ -33,4 +33,4 @@ for trial_dir in sorted(WRAPPED_Y_ROOT.glob("trial_*")):
     trial_name = trial_dir.name
     copy_trial_files(trial_name)
 
-print("🎯 Dataset collection complete.")
+print("Dataset collection complete.")

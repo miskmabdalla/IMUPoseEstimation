@@ -23,9 +23,9 @@ echo "🚀 Starting preprocessing pipeline..."
 
 # Loop through and run each script
 for script in "${SCRIPTS[@]}"; do
-  echo "🔧 Running $script.py..."
+  echo "Running $script.py..."
   python "$SCRIPT_DIR/$script.py"
-  echo "✅ Finished $script.py"
+  echo "Finished $script.py"
 done
 
-echo "🎉 All preprocessing scripts completed successfully."
+echo "All preprocessing scripts completed successfully."

@@ -43,9 +43,9 @@ for folder_name in os.listdir(input_root):
                     shutil.copy2(input_Y_csv, output_Y_csv)
                     print(f"  Copied Y.csv to: {output_Y_csv}")
                 else:
-                    print(f"  ⚠️ Y.csv not found in: {input_folder}")
+                    print(f"  Y.csv not found in: {input_folder}")
 
             except Exception as e:
-                print(f"  ❌ Error processing {input_folder}: {e}")
+                print(f"  Error processing {input_folder}: {e}")
         else:
-            print(f"  ⚠️ X.csv not found in: {input_folder}")
+            print(f"  X.csv not found in: {input_folder}")

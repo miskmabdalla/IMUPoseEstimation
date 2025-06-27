@@ -96,7 +96,7 @@ void loop() {
         bool valid = isfinite(aX) && isfinite(aY) && isfinite(aZ) &&
                      isfinite(gX) && isfinite(gY) && isfinite(gZ);
         if (!valid) {
-          Serial.println("⚠️ Invalid IMU reading, skipping");
+          Serial.println("Invalid IMU reading, skipping");
           continue;
         }
 

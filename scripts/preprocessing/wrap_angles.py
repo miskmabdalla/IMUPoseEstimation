@@ -18,16 +18,16 @@ def process_y_file(input_y_path: Path, output_y_path: Path):
 
     output_y_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_y_path, index=False)
-    print(f"✅ Saved wrapped Y.csv to {output_y_path}")
+    print(f"Saved wrapped Y.csv to {output_y_path}")
 
 # === Process all trial folders ===
 for trial_dir in sorted(INPUT_ROOT.glob("trial_*")):
     input_y_path = trial_dir / "Y.csv"
     if not input_y_path.exists():
-        print(f"⚠️ Y.csv missing in {trial_dir.name}, skipping.")
+        print(f"Y.csv missing in {trial_dir.name}, skipping.")
         continue
 
     output_y_path = OUTPUT_ROOT / trial_dir.name / "Y.csv"
     process_y_file(input_y_path, output_y_path)
 
-print("🎯 All Y.csv files wrapped and saved.")
+print("All Y.csv files wrapped and saved.")
