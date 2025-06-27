@@ -3,8 +3,8 @@ import shutil
 import pandas as pd
 
 # Define input and output base directories
-input_root = 'aligned_dataset'
-output_root = 'dataset_reduction/dataset_no_left_limbs'
+input_root = 'dataset/final_dataset'
+output_root = 'dataset/reduced_dataset/dataset_no_left_limbs'
 
 # Ensure output root directory exists
 os.makedirs(output_root, exist_ok=True)
@@ -44,9 +44,9 @@ for folder_name in os.listdir(input_root):
                     shutil.copy2(input_Y_csv, output_Y_csv)
                     print(f"  Copied Y.csv to: {output_Y_csv}")
                 else:
-                    print(f"  ⚠️ Y.csv not found in: {input_folder}")
+                    print(f"  Y.csv not found in: {input_folder}")
 
             except Exception as e:
-                print(f"  ❌ Error processing {input_folder}: {e}")
+                print(f"  Error processing {input_folder}: {e}")
         else:
-            print(f"  ⚠️ X.csv not found in: {input_folder}")
+            print(f"  X.csv not found in: {input_folder}")

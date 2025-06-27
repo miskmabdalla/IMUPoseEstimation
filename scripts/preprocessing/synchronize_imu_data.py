@@ -6,8 +6,8 @@ from scipy.interpolate import PchipInterpolator
 
 # === Config ===
 STEP_MS = 20  # sampling interval in ms
-INPUT_ROOT = Path("dataset/imu_data")
-OUTPUT_ROOT = Path("dataset/sync_imu_data")
+INPUT_ROOT = Path("dataset/intermediate_data/imu_data")
+OUTPUT_ROOT = Path("dataset/intermediate_data/sync_imu_data")
 SENSOR_MAP_CSV = Path("sensors_order.csv")
 
 # === Load sensor role mapping ===

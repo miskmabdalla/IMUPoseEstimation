@@ -3,9 +3,9 @@ from pathlib import Path
 import pandas as pd
 
 # === Config ===
-IMU_ROOT = Path("dataset/sync_imu_data")
-ANGLES_ROOT = Path("dataset/angles_data/csv_files")
-OUTPUT_ROOT = Path("aligned_dataset")
+IMU_ROOT = Path("dataset/intermediate_data/sync_imu_data")
+ANGLES_ROOT = Path("dataset/intermediate_data/angles_data/csv_files")
+OUTPUT_ROOT = Path("dataset/intermediate_data/aligned_dataset")
 
 # === Helpers ===
 def load_csv(path):

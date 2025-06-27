@@ -2,7 +2,7 @@ import os
 import shutil
 
 SOURCE_ROOT = 'Sports2D_results'
-DEST_DIR = 'dataset/angles_data/mot_files'
+DEST_DIR = 'dataset/intermediate_data/angles_data/mot_files'
 
 # Ensure destination directory exists
 os.makedirs(DEST_DIR, exist_ok=True)

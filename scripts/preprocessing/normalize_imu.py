@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Base directory containing all trial folders
-BASE_DIR = "dataset/imu_data"
+BASE_DIR = "dataset/intermediate_data/imu_data"
 
 def normalize_millis_in_csv(file_path):
     try:
