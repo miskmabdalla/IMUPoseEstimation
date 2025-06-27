@@ -3,8 +3,8 @@ import shutil
 import pandas as pd
 
 # Define input and output base directories
-input_root = 'aligned_dataset'
-output_root = 'dataset_reduction/dataset_no_left_leg'
+input_root = 'dataset/final_dataset'
+output_root = 'dataset/reduced_dataset/dataset_no_left_leg'
 
 # Ensure output root directory exists
 os.makedirs(output_root, exist_ok=True)

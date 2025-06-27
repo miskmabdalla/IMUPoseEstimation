@@ -37,8 +37,8 @@ def convert_mot_to_csv(mot_path: str, csv_path: str = None):
 
 
 
-mot_files_dir = Path("dataset/angles_data/mot_files")
-csv_files_dir = Path("dataset/angles_data/csv_files")
+mot_files_dir = Path("dataset/intermediate_data/angles_data/mot_files")
+csv_files_dir = Path("dataset/intermediate_data/angles_data/csv_files")
 
 def convert_all_mot_files():
 

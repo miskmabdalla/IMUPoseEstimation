@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plot every cleaned Y.csv in aligned_dataset/trial_*.
+Plot every cleaned Y.csv in dataset/final_dataset/trial_*.
 
 For each trial:
 • A 4x6 grid of joint-angle plots is generated.
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # ─── configuration ──────────────────────────────────────────────────
-ROOT          = Path("aligned_dataset")   # parent folder of trial_* dirs
+ROOT          = Path("dataset/final_dataset")   # parent folder of trial_* dirs
 N_ROWS, N_COLS = 4, 6                     # grid layout (N_ROWS * N_COLS ≥ #columns)
 SAVE_PNG       = True                     # set False if you do not want image files
 # ────────────────────────────────────────────────────────────────────
