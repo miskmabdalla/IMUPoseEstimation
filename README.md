@@ -42,8 +42,7 @@ The system can predict joint angles and positions using only IMU data, making it
 
 ### Hardware Requirements
 
-- 5x Seeed Studio XIAO NRF52840 development boards
-- 5x IMU sensors (MPU6050 or similar)
+- 5x IMU sensors
 - Computer with Bluetooth capability
 - Camera for video recording
 
