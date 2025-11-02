@@ -86,10 +86,10 @@ The system can predict joint angles and positions using only IMU data, making it
 
    - Connect IMU sensors to XIAO NRF52840 boards
    - Position sensors on body segments:
-     - Pelvis
-     - Left thigh
-     - Left shank
-     - Left arm
+     - Right wrist
+     - Left wrist
+     - Right ankle
+     - Left ankle
      - Sternum
 2. **Sensor Programming**
 
