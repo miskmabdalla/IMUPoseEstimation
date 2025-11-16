@@ -1,0 +1,112 @@
+
+========================================
+Starting MCCV repeat 1/2
+========================================
+Epoch 1/50 | Train RMSE 78.41° | Val RMSE 78.15° | Train MAE 55.18° | Val MAE 54.32°
+Epoch 2/50 | Train RMSE 77.95° | Val RMSE 78.16° | Train MAE 54.28° | Val MAE 54.82°
+Epoch 3/50 | Train RMSE 77.95° | Val RMSE 78.14° | Train MAE 54.29° | Val MAE 54.51°
+Epoch 4/50 | Train RMSE 77.95° | Val RMSE 78.14° | Train MAE 54.30° | Val MAE 54.68°
+Epoch 5/50 | Train RMSE 77.88° | Val RMSE 77.54° | Train MAE 54.29° | Val MAE 54.00°
+Epoch 6/50 | Train RMSE 76.41° | Val RMSE 74.46° | Train MAE 52.60° | Val MAE 50.09°
+Epoch 7/50 | Train RMSE 73.01° | Val RMSE 72.03° | Train MAE 48.99° | Val MAE 48.29°
+Epoch 8/50 | Train RMSE 70.64° | Val RMSE 69.61° | Train MAE 46.66° | Val MAE 46.12°
+Epoch 9/50 | Train RMSE 67.28° | Val RMSE 65.34° | Train MAE 43.38° | Val MAE 41.60°
+Epoch 10/50 | Train RMSE 63.37° | Val RMSE 61.78° | Train MAE 39.98° | Val MAE 38.60°
+Epoch 11/50 | Train RMSE 59.72° | Val RMSE 59.09° | Train MAE 37.08° | Val MAE 36.63°
+Epoch 12/50 | Train RMSE 56.69° | Val RMSE 55.71° | Train MAE 34.67° | Val MAE 33.72°
+Epoch 13/50 | Train RMSE 54.03° | Val RMSE 53.46° | Train MAE 32.54° | Val MAE 31.85°
+Epoch 14/50 | Train RMSE 51.75° | Val RMSE 51.21° | Train MAE 30.62° | Val MAE 30.02°
+Epoch 15/50 | Train RMSE 49.46° | Val RMSE 49.09° | Train MAE 28.79° | Val MAE 28.27°
+Epoch 16/50 | Train RMSE 47.51° | Val RMSE 47.50° | Train MAE 27.25° | Val MAE 26.83°
+Epoch 17/50 | Train RMSE 45.28° | Val RMSE 45.64° | Train MAE 25.53° | Val MAE 25.23°
+Epoch 18/50 | Train RMSE 43.75° | Val RMSE 44.41° | Train MAE 24.31° | Val MAE 24.32°
+Epoch 19/50 | Train RMSE 42.04° | Val RMSE 42.80° | Train MAE 23.02° | Val MAE 23.06°
+Epoch 20/50 | Train RMSE 40.44° | Val RMSE 41.65° | Train MAE 21.93° | Val MAE 22.12°
+Epoch 21/50 | Train RMSE 39.45° | Val RMSE 40.85° | Train MAE 21.23° | Val MAE 21.58°
+Epoch 22/50 | Train RMSE 38.43° | Val RMSE 39.99° | Train MAE 20.51° | Val MAE 20.88°
+Epoch 23/50 | Train RMSE 36.78° | Val RMSE 38.72° | Train MAE 19.45° | Val MAE 20.17°
+Epoch 24/50 | Train RMSE 35.52° | Val RMSE 37.75° | Train MAE 18.68° | Val MAE 19.40°
+Epoch 25/50 | Train RMSE 34.91° | Val RMSE 37.26° | Train MAE 18.30° | Val MAE 18.94°
+Epoch 26/50 | Train RMSE 33.70° | Val RMSE 36.00° | Train MAE 17.59° | Val MAE 18.13°
+Epoch 27/50 | Train RMSE 33.20° | Val RMSE 35.66° | Train MAE 17.31° | Val MAE 17.80°
+Epoch 28/50 | Train RMSE 32.32° | Val RMSE 35.25° | Train MAE 16.78° | Val MAE 17.62°
+Epoch 29/50 | Train RMSE 31.49° | Val RMSE 34.85° | Train MAE 16.31° | Val MAE 17.34°
+Epoch 30/50 | Train RMSE 31.44° | Val RMSE 34.94° | Train MAE 16.23° | Val MAE 17.31°
+Epoch 31/50 | Train RMSE 30.64° | Val RMSE 33.87° | Train MAE 15.79° | Val MAE 16.67°
+Epoch 32/50 | Train RMSE 29.75° | Val RMSE 33.71° | Train MAE 15.30° | Val MAE 16.49°
+Epoch 33/50 | Train RMSE 29.30° | Val RMSE 33.10° | Train MAE 15.04° | Val MAE 16.19°
+Epoch 34/50 | Train RMSE 28.59° | Val RMSE 33.06° | Train MAE 14.62° | Val MAE 16.02°
+Epoch 35/50 | Train RMSE 28.23° | Val RMSE 32.19° | Train MAE 14.42° | Val MAE 15.54°
+Epoch 36/50 | Train RMSE 28.39° | Val RMSE 32.39° | Train MAE 14.49° | Val MAE 15.57°
+Epoch 37/50 | Train RMSE 27.50° | Val RMSE 33.34° | Train MAE 14.00° | Val MAE 15.90°
+Epoch 38/50 | Train RMSE 27.94° | Val RMSE 32.07° | Train MAE 14.20° | Val MAE 15.34°
+Epoch 39/50 | Train RMSE 26.78° | Val RMSE 31.79° | Train MAE 13.65° | Val MAE 15.20°
+Epoch 40/50 | Train RMSE 26.13° | Val RMSE 30.90° | Train MAE 13.31° | Val MAE 14.70°
+Epoch 41/50 | Train RMSE 25.76° | Val RMSE 30.94° | Train MAE 13.12° | Val MAE 14.58°
+Epoch 42/50 | Train RMSE 25.56° | Val RMSE 31.05° | Train MAE 13.00° | Val MAE 14.64°
+Epoch 43/50 | Train RMSE 25.56° | Val RMSE 30.27° | Train MAE 12.97° | Val MAE 14.12°
+Epoch 44/50 | Train RMSE 25.01° | Val RMSE 30.51° | Train MAE 12.74° | Val MAE 14.22°
+Epoch 45/50 | Train RMSE 24.69° | Val RMSE 30.32° | Train MAE 12.55° | Val MAE 14.03°
+Epoch 46/50 | Train RMSE 24.40° | Val RMSE 30.28° | Train MAE 12.39° | Val MAE 14.12°
+Epoch 47/50 | Train RMSE 24.18° | Val RMSE 30.29° | Train MAE 12.28° | Val MAE 13.88°
+Epoch 48/50 | Train RMSE 23.52° | Val RMSE 29.64° | Train MAE 11.90° | Val MAE 13.57°
+Epoch 49/50 | Train RMSE 23.35° | Val RMSE 29.23° | Train MAE 11.85° | Val MAE 13.46°
+Epoch 50/50 | Train RMSE 23.22° | Val RMSE 29.41° | Train MAE 11.76° | Val MAE 13.38°
+Repeat 1 finished — Test RMSE: 28.840°, Test MAE: 13.382°, Test R2: 0.8880
+
+========================================
+Starting MCCV repeat 2/2
+========================================
+Epoch 1/50 | Train RMSE 78.55° | Val RMSE 77.84° | Train MAE 55.30° | Val MAE 54.19°
+Epoch 2/50 | Train RMSE 78.11° | Val RMSE 77.85° | Train MAE 54.44° | Val MAE 54.44°
+Epoch 3/50 | Train RMSE 78.11° | Val RMSE 77.86° | Train MAE 54.45° | Val MAE 53.99°
+Epoch 4/50 | Train RMSE 78.11° | Val RMSE 77.84° | Train MAE 54.44° | Val MAE 54.16°
+Epoch 5/50 | Train RMSE 78.11° | Val RMSE 77.84° | Train MAE 54.45° | Val MAE 54.28°
+Epoch 6/50 | Train RMSE 77.65° | Val RMSE 76.25° | Train MAE 54.21° | Val MAE 53.17°
+Epoch 7/50 | Train RMSE 73.62° | Val RMSE 71.16° | Train MAE 49.87° | Val MAE 47.45°
+Epoch 8/50 | Train RMSE 69.06° | Val RMSE 65.54° | Train MAE 45.33° | Val MAE 42.09°
+Epoch 9/50 | Train RMSE 63.17° | Val RMSE 60.44° | Train MAE 39.69° | Val MAE 37.33°
+Epoch 10/50 | Train RMSE 58.29° | Val RMSE 56.78° | Train MAE 35.59° | Val MAE 34.58°
+Epoch 11/50 | Train RMSE 55.54° | Val RMSE 54.29° | Train MAE 33.42° | Val MAE 32.18°
+Epoch 12/50 | Train RMSE 52.43° | Val RMSE 51.31° | Train MAE 30.86° | Val MAE 29.81°
+Epoch 13/50 | Train RMSE 49.37° | Val RMSE 48.81° | Train MAE 28.37° | Val MAE 27.72°
+Epoch 14/50 | Train RMSE 46.69° | Val RMSE 46.00° | Train MAE 26.29° | Val MAE 25.57°
+Epoch 15/50 | Train RMSE 44.07° | Val RMSE 43.80° | Train MAE 24.39° | Val MAE 23.80°
+Epoch 16/50 | Train RMSE 41.72° | Val RMSE 41.78° | Train MAE 22.65° | Val MAE 22.27°
+Epoch 17/50 | Train RMSE 39.52° | Val RMSE 39.83° | Train MAE 21.04° | Val MAE 20.77°
+Epoch 18/50 | Train RMSE 37.86° | Val RMSE 39.01° | Train MAE 19.89° | Val MAE 20.12°
+Epoch 19/50 | Train RMSE 36.32° | Val RMSE 37.38° | Train MAE 18.83° | Val MAE 19.01°
+Epoch 20/50 | Train RMSE 34.73° | Val RMSE 37.11° | Train MAE 17.90° | Val MAE 18.88°
+Epoch 21/50 | Train RMSE 33.51° | Val RMSE 35.48° | Train MAE 17.17° | Val MAE 17.72°
+Epoch 22/50 | Train RMSE 32.56° | Val RMSE 34.58° | Train MAE 16.58° | Val MAE 17.12°
+Epoch 23/50 | Train RMSE 31.62° | Val RMSE 33.80° | Train MAE 16.05° | Val MAE 16.46°
+Epoch 24/50 | Train RMSE 30.63° | Val RMSE 33.39° | Train MAE 15.47° | Val MAE 16.38°
+Epoch 25/50 | Train RMSE 30.09° | Val RMSE 33.05° | Train MAE 15.14° | Val MAE 16.05°
+Epoch 26/50 | Train RMSE 29.28° | Val RMSE 31.85° | Train MAE 14.71° | Val MAE 15.29°
+Epoch 27/50 | Train RMSE 28.53° | Val RMSE 31.68° | Train MAE 14.34° | Val MAE 15.21°
+Epoch 28/50 | Train RMSE 28.20° | Val RMSE 31.35° | Train MAE 14.13° | Val MAE 14.97°
+Epoch 29/50 | Train RMSE 27.28° | Val RMSE 30.70° | Train MAE 13.65° | Val MAE 14.54°
+Epoch 30/50 | Train RMSE 26.69° | Val RMSE 30.16° | Train MAE 13.37° | Val MAE 14.18°
+Epoch 31/50 | Train RMSE 26.30° | Val RMSE 30.93° | Train MAE 13.12° | Val MAE 14.46°
+Epoch 32/50 | Train RMSE 26.06° | Val RMSE 29.59° | Train MAE 12.99° | Val MAE 13.89°
+Epoch 33/50 | Train RMSE 25.61° | Val RMSE 29.68° | Train MAE 12.77° | Val MAE 13.91°
+Epoch 34/50 | Train RMSE 25.46° | Val RMSE 29.36° | Train MAE 12.70° | Val MAE 13.73°
+Epoch 35/50 | Train RMSE 24.59° | Val RMSE 28.84° | Train MAE 12.25° | Val MAE 13.38°
+Epoch 36/50 | Train RMSE 24.12° | Val RMSE 28.96° | Train MAE 11.98° | Val MAE 13.40°
+Epoch 37/50 | Train RMSE 23.77° | Val RMSE 28.75° | Train MAE 11.81° | Val MAE 13.34°
+Epoch 38/50 | Train RMSE 23.71° | Val RMSE 29.06° | Train MAE 11.77° | Val MAE 13.34°
+Epoch 39/50 | Train RMSE 23.44° | Val RMSE 28.31° | Train MAE 11.65° | Val MAE 12.83°
+Epoch 40/50 | Train RMSE 22.85° | Val RMSE 27.76° | Train MAE 11.34° | Val MAE 12.54°
+Epoch 41/50 | Train RMSE 24.71° | Val RMSE 28.37° | Train MAE 12.28° | Val MAE 13.02°
+Epoch 42/50 | Train RMSE 22.55° | Val RMSE 27.57° | Train MAE 11.26° | Val MAE 12.45°
+Epoch 43/50 | Train RMSE 22.04° | Val RMSE 30.17° | Train MAE 10.96° | Val MAE 13.83°
+Epoch 44/50 | Train RMSE 22.69° | Val RMSE 27.62° | Train MAE 11.29° | Val MAE 12.45°
+Epoch 45/50 | Train RMSE 21.67° | Val RMSE 27.09° | Train MAE 10.79° | Val MAE 12.09°
+Epoch 46/50 | Train RMSE 21.41° | Val RMSE 27.64° | Train MAE 10.62° | Val MAE 12.42°
+Epoch 47/50 | Train RMSE 21.51° | Val RMSE 27.48° | Train MAE 10.69° | Val MAE 12.25°
+Epoch 48/50 | Train RMSE 21.59° | Val RMSE 27.33° | Train MAE 10.69° | Val MAE 12.07°
+Epoch 49/50 | Train RMSE 21.06° | Val RMSE 27.02° | Train MAE 10.50° | Val MAE 11.87°
+Epoch 50/50 | Train RMSE 21.14° | Val RMSE 26.93° | Train MAE 10.49° | Val MAE 11.82°
+Repeat 2 finished — Test RMSE: 27.117°, Test MAE: 11.892°, Test R2: 0.9006
+
+Saved MCCV summary to: logs/run_2025-11-16_20-59-23/mccv_summary.csv

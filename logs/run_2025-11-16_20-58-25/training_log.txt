@@ -1,0 +1,23 @@
+
+========================================
+Starting MCCV repeat 1/2
+========================================
+Epoch 1/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.99° | Val MAE 72.03°
+Epoch 2/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.99° | Val MAE 72.03°
+Epoch 3/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.99° | Val MAE 72.03°
+Epoch 4/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 5/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 6/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 7/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 8/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 9/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 10/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 11/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Epoch 12/50 | Train RMSE 88.11° | Val RMSE 88.15° | Train MAE 71.98° | Val MAE 72.03°
+Early stopping triggered after 12 epochs (patience 10).
+Repeat 1 finished — Test RMSE: 88.246°, Test MAE: 72.127°, Test R2: -0.0484
+
+========================================
+Starting MCCV repeat 2/2
+========================================
+Epoch 1/50 | Train RMSE 88.11° | Val RMSE 88.26° | Train MAE 71.99° | Val MAE 72.12°

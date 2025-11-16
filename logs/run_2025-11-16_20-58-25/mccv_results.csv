@@ -1,0 +1,2 @@
+repeat,best_epoch,test_mse,test_rmse,test_mae,test_r2,train_time_s
+1,2,7787.275390625,88.24554034411598,72.12711334228516,-0.048386454582214355,47.08
